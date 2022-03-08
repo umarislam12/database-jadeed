@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "84tT3vwF0AyYsj9iJuxecTGeYjweiYR3ZtKEwheyXleDxBxsMyG6o7a358cU16ZkLUtMihiEjttLynhSaxyafQ==",
+  "dgSpecHash": "f5uXI1UjAd8OA6HOFO9ckg0DYrnutww9p6hp7QIOUthC0z2wTS2K33u8a6m3eSZzQgOZH1s0xEs3V6PZAMHQ4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\POS\\POS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\obnox\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\obnox\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\obnox\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\obnox\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\obnox\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
     "C:\\Users\\obnox\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "C:\\Users\\obnox\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
