@@ -15,10 +15,10 @@ namespace Domain
         public int QtyStock { get; set; }
         public string Brand { get; set; }
         public string Category { get; set; }
-        public int Cost { get; set; }
+        public double Cost { get; set; }
         public string Vandor { get; set; }
-        public int WholesalePrice { get; set; }
-        public int RetailPrice { get; set; }
+        public double WholesalePrice { get; set; }
+        public double RetailPrice { get; set; }
         public bool Packed { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
