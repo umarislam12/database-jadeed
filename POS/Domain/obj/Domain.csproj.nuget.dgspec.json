@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\Domain\\Domain.csproj": {}
+    "C:\\Users\\abdul\\Desktop\\jadeed-autos\\POS\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\Domain\\Domain.csproj": {
+    "C:\\Users\\abdul\\Desktop\\jadeed-autos\\POS\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\abdul\\Desktop\\jadeed-autos\\POS\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\obnox\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\obnox\\Desktop\\jadeed\\POS\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\abdul\\Desktop\\jadeed-autos\\POS\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abdul\\Desktop\\jadeed-autos\\POS\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\obnox\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
