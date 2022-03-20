@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import axios from 'axios';
+import { Header, List } from 'semantic-ui-react';
 function App() {
   const [products, setProducts]=useState([]);
   useEffect(()=>{
@@ -11,17 +12,17 @@ function App() {
     })
   }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <ul>
+    <div >
+      
+        <Header as='h2' icon='plug' content="Jadeed"/>
+       <List>
          {products.map((product:any)=>(
-           <li key={product.id}>
+           <List.Item key={product.id}>
              {product.productName}
-           </li>
+           </List.Item>
          ))}
-       </ul>
-      </header>
+       </List>
+      
     </div>
   );
 }
