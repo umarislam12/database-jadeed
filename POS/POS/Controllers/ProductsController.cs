@@ -1,4 +1,6 @@
-﻿using Domain;
+﻿using Application.Products;
+using Domain;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,19 +11,14 @@ namespace POS.Controllers
 
     public class ProductsController : BaseApiController
     {
-        private readonly DataContext _context;
-
-        public ProductsController(DataContext context)
-        {
-            _context = context;
-        }
+       
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts(){
-            return await _context.Products.ToListAsync();
+            return await Mediator.Send(new List.Query());
         }
         [HttpGet("{id}")] //activities/id
-        public async Task<ActionResult<Product>> GetProduct(Guid id) { 
-        return await _context.Products.FindAsync(id);
+        public async Task<ActionResult<Product>> GetProduct(Guid id) {
+            return await Mediator.Send(new Details.Query { Id = id });
         } 
     }
 }

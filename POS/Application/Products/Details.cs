@@ -1,6 +1,5 @@
 ﻿using Domain;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Persistence;
 using System;
 using System.Collections.Generic;
@@ -8,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Items
+namespace Application.Products
 {
-    public class List
+    public class Details
     {
-        public class Query : IRequest<List<Product>> { }
-        public class Handler : IRequestHandler<Query, List<Product>>
+        public class Query: IRequest<Product>
+        {
+            public Guid Id { get; set; }
+        }
+        public class Handler : IRequestHandler<Query, Product>
         {
             private readonly DataContext _context;
 
@@ -22,9 +24,9 @@ namespace Application.Items
                 _context = context;
             }
 
-            public async Task<List<Product>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Product> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.Products.ToListAsync();
+                return await _context.Products.FindAsync(request.Id);
             }
         }
     }

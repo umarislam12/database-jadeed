@@ -29,7 +29,7 @@ namespace API
                 logger.LogError(ex, "an error occured during migration");
             }
             await host.RunAsync();
-        }
+        } 
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
