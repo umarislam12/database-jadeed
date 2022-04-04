@@ -1,4 +1,4 @@
-﻿using
+﻿
 using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

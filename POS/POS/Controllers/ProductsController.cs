@@ -19,6 +19,16 @@ namespace POS.Controllers
         [HttpGet("{id}")] //activities/id
         public async Task<ActionResult<Product>> GetProduct(Guid id) {
             return await Mediator.Send(new Details.Query { Id = id });
-        } 
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(Product product) 
+        { 
+        return Ok(await Mediator.Send(new Create.Command { Product=product}));
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(Guid id, Product )
+        {
+
+        }
     }
 }
