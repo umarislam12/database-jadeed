@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain;
+using FluentValidation;
 using MediatR;
 using Persistence;
 using System;
@@ -15,6 +16,13 @@ namespace Application.Products
         public class Command : IRequest
         {
             public Product Product { get; set; }
+        }
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+            {
+                RuleFor(x => x.Product).SetValidator(new ProductsValidator());
+            }
         }
         public class Handler : IRequestHandler<Command>
         {

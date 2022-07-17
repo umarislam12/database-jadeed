@@ -26,7 +26,9 @@ namespace Application.Products
 
             public async Task<Product> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.Products.FindAsync(request.Id);
+                var product= await _context.Products.FindAsync(request.Id);
+                if (product == null) throw new Exception("product not found");
+                return product;
             }
         }
     }

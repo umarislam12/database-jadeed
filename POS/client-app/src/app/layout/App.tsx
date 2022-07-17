@@ -1,37 +1,33 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React  from 'react';
 
 
-import axios from 'axios';
-import {  Container, Header, List } from 'semantic-ui-react';
-import { Product } from '../models/product';
+import {Container} from 'semantic-ui-react';
 import NavBar from './NavBar';
 import ProductDashboard from '../../features/products/dashboard/ProductDashboard';
-import {v4 as uuid} from 'uuid';
-import agent from '../api/agent';
-import LoadingComponent from './LoadingComponent';
-import { useStore } from '../stores/store';
 import { observer } from 'mobx-react-lite';
+import { Route, useLocation } from 'react-router-dom';
+import HomePage from '../../features/home/HomePage';
+import ProductForm from '../../features/products/form/ProductForm';
+import ProductDetails from '../../features/products/details/ProductDetails';
 function App() {
-  const {productStore}=useStore()
-    
-  useEffect(() => {
-  productStore.loadProducts()
-  }, [productStore])
-  //view product in productdetail from productList component
- 
- 
-  
-  if(productStore.loadingInitial) return <LoadingComponent content='App loading..'/>
+ const location=useLocation()
   return (
     < >
-
+<Route path='/' exact component={HomePage}/>
       <NavBar />
-      <Container style={{ marginTop: '7em' }}>
+      <Route path={'/(.+)'} render={()=>(
+        <>
+         <Container style={{ marginTop: '7em' }}>
         {/* <h1>{productStore.}</h1> */}
         {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
-        <ProductDashboard
-          />
+      
+      <Route path='/products' exact component={ProductDashboard}/>
+      <Route path='/products/:id' component={ProductDetails}/>
+      <Route key={location.key} path={['/createProduct', '/manage/:id']} component={ProductForm}/>
       </Container>
+        </>
+      )}/>
+     
     </>
   );
 }
