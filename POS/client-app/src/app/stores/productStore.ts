@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 import { format } from "date-fns";
-=======
->>>>>>> 0fbe6c2f1254ca8312ef81cbebcef3538451542b
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
 import { Product } from "../models/product";
