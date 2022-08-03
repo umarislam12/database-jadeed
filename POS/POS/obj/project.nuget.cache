@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JRz9IEOExEEIgmwj9PmsLGhuilUTBjtD/5pyQIzmtearOQGSErhFiKEAQp/Y6zBiV6fV3R5fbcCxzbOrx5Vv7A==",
+  "dgSpecHash": "eRu6mN4+kti4WvN9OUv42MF3ITb9xWEtsVP4n5nCMISrj/0W8tLLh5mTEFbVJtzyeRecuIhGxHslEEkwoef2qQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\API.csproj",
+  "projectFilePath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\f14b1\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\f14b1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

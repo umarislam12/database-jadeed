@@ -1851,9 +1851,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\API.csproj",
-      "projectName": "API",
-      "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\API.csproj",
+      "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj",
+      "projectName": "POS",
+      "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj",
       "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\obj\\",
       "projectStyle": "PackageReference",
