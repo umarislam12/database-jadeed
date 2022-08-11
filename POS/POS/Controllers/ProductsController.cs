@@ -1,6 +1,7 @@
 ﻿using Application.Products;
 using Domain;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +12,12 @@ namespace POS.Controllers
 
     public class ProductsController : BaseApiController
     {
-       
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetProducts(){
             return resultHandler(await Mediator.Send(new List.Query()));
         }
+       
         [HttpGet("{id}")] //activities/id
         public async Task<IActionResult> GetProduct(Guid id) {
 

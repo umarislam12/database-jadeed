@@ -138,3 +138,11 @@ C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\POS.pdb
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\obj\Debug\net6.0\POS.csproj.CopyComplete
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\obj\Debug\net6.0\POS.genruntimeconfig.cache
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\obj\Debug\net6.0\ref\POS.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using POS.Controllers;
 
-namespace API.Controllers
+namespace POS.Controllers
 {
     public class BuggyController : BaseApiController
     {
@@ -25,7 +24,7 @@ namespace API.Controllers
             {
                 throw new Exception("This is a server error");
             }
-            catch 
+            catch
             {
                 return null;
             }

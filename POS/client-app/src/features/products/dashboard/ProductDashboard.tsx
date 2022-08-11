@@ -21,7 +21,7 @@ export default observer(function ProductDashboard() {
  
  
   
-  if(productStore.loadingInitial) return <LoadingComponent content='App loading..'/>
+  if(productStore.loadingInitial) return <LoadingComponent content='loading products'/>
   return (
     <Grid>
       <Grid.Column width='10'>
