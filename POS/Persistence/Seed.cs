@@ -90,8 +90,25 @@ namespace Persistence
                 },
               
             };
+            if (context.Meetings.Any()) return;
 
+            var meetings = new List<Meeting>
+            {
+                new Meeting
+                {
+                   Agenda="should we buy more products?",
+                   MeetingDate=DateTime.Now.AddMonths(-2),
+
+                },
+                new Meeting
+                {
+                   Agenda="should we add new products?",
+                   MeetingDate=DateTime.Now.AddMonths(-2),
+
+                },
+            };
             await context.Products.AddRangeAsync(products);
+            await context.Meetings.AddRangeAsync(meetings);
             await context.SaveChangesAsync();
         }
     }

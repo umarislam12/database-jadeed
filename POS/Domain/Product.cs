@@ -18,5 +18,6 @@
         public bool Packed { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
+        public ICollection<ProductSupplier> Suppliers { get; set; }
     }
 }
