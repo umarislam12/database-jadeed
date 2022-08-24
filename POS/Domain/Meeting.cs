@@ -11,6 +11,7 @@ namespace Domain
         public Guid Id { get; set; }
         public string Agenda { get; set; }
         public DateTime MeetingDate { get; set; }
-        public ICollection<UserMeeting> Attendees { get; set; }
+        public bool IsCancelled { get; set; }
+        public ICollection<UserMeeting> Attendees { get; set; } = new List<UserMeeting>();
     }
 }

@@ -12,7 +12,7 @@ namespace POS.Controllers
 
     public class MeetingsController : BaseApiController
     {
-        [AllowAnonymous]
+        
         [HttpGet]
         public async Task<IActionResult> GetMeetings(){
             return resultHandler(await Mediator.Send(new List.Query()));
@@ -28,16 +28,23 @@ namespace POS.Controllers
         { 
         return resultHandler(await Mediator.Send(new Create.Command { Meeting=meeting}));
         }
+        [Authorize(Policy = "IsMeetingHost")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMeeting(Guid id, Meeting meeting)
         {
             meeting.Id = id;
             return resultHandler(await Mediator.Send(new Edit.Command{Meeting =meeting}));
         }
+        [Authorize(Policy = "IsMeetingHost")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteMeeting(Guid id)
         {
             return resultHandler(await Mediator.Send(new Delete.Command { Id=id}));
+        }
+        [HttpPost("{id}/attend")]
+        public async Task<IActionResult> Attend(Guid id)
+        {
+            return resultHandler(await Mediator.Send(new UpdateAttendance.Command { Id = id }));
         }
     }
 }

@@ -849,6 +849,19 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2169,6 +2182,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Persistence/1.0.0": {
       "type": "project",
       "path": "../Persistence/Persistence.csproj",
@@ -2178,6 +2196,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.1",
       "Microsoft.IdentityModel.Tokens >= 6.22.0",
@@ -2214,6 +2233,9 @@
           "projectReferences": {
             "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj"
+            },
+            "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

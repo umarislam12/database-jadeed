@@ -1,5 +1,7 @@
 ﻿
 using Application.Core;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -16,19 +18,19 @@ namespace Application.Meetings
     public class List
     {
         //List.Query
-        public class Query : IRequest<Result<List<Meeting>>> { }
-        public class Handler : IRequestHandler<Query, Result<List<Meeting>>>
+        public class Query : IRequest<Result<List<MeetingDto>>> { }
+        public class Handler : IRequestHandler<Query, Result<List<MeetingDto>>>
         {
             private readonly DataContext _context;
+            private readonly IMapper _mapper;
 
-
-            public Handler(DataContext context, ILogger<List> logger)
+            public Handler(DataContext context, ILogger<List> logger, IMapper mapper)
             {
                 _context = context;
-
+                _mapper = mapper;
             }
 
-            public async Task<Result<List<Meeting>>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<List<MeetingDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 ///*  try
                 //  {
@@ -42,8 +44,15 @@ namespace Application.Meetings
                 //  catch(Exception ex) when (ex is TaskCanceledException)
                 //  {
                 //      _logger.LogInformation("Task was cancelled");
+
                 //  }*/
-                return Result<List<Meeting>>.Success(await _context.Meetings.ToListAsync());
+                var meetings = await _context.Meetings
+                    //.Include(a=>a.Attendees)
+                    //.ThenInclude(u=>u.AppUser)
+                    .ProjectTo<MeetingDto>(_mapper.ConfigurationProvider)
+                    .ToListAsync(cancellationToken);
+              //  var meetingsToReturn=_mapper.Map<List<MeetingDto>>(meetings);
+                return Result<List<MeetingDto>>.Success(meetings);
             }
         }
     }

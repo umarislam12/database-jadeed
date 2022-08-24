@@ -1,5 +1,7 @@
 ﻿using Domain;
+using Infrastructure.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
@@ -33,6 +35,14 @@ namespace POS.Extensions
                         ValidateAudience = false
                     };
                 });
+            services.AddAuthorization(opt =>
+            {
+                opt.AddPolicy("IsMeetingHost", policy =>
+                {
+                    policy.Requirements.Add(new IsHostRequirement());
+                });
+            });
+            services.AddTransient<IAuthorizationHandler, IsHostRequirementHandler>();
             services.AddScoped<TokenService>();
             return services;
         }

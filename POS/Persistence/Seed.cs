@@ -11,7 +11,7 @@ namespace Persistence
     {
         public static async Task SeedData(DataContext context, UserManager<AppUser> userManager)
         {
-            if (!userManager.Users.Any()) 
+            if (!userManager.Users.Any() && !context.Meetings.Any()) 
             {
                 var users = new List<AppUser>
                 {
@@ -32,6 +32,42 @@ namespace Persistence
                 {
                     await userManager.CreateAsync(user, "Pa$$w0rd");
                 }
+              
+                var meetings = new List<Meeting>
+                {
+                    new Meeting
+                    {
+                       Agenda="should we buy more products?",
+                       MeetingDate=DateTime.Now.AddMonths(-2),
+                       Attendees= new List<UserMeeting>
+                       {
+                           new UserMeeting
+                           {
+                               AppUser=users[0],
+                               IsCovener=true
+                           }
+                       }
+                    },
+                    new Meeting
+                    {
+                       Agenda="should we go to china?",
+                       MeetingDate=DateTime.Now.AddMonths(-2),
+                       Attendees= new List<UserMeeting>
+                       {
+                           new UserMeeting
+                           {
+                               AppUser=users[1],
+                               IsCovener=true
+                           },
+                           new UserMeeting
+                           {
+                               AppUser=users[0],
+                               IsCovener=false
+                           }
+                       }
+                    },
+                };
+                await context.Meetings.AddRangeAsync(meetings);
             }
             if (context.Products.Any()) return;
 
@@ -90,25 +126,11 @@ namespace Persistence
                 },
               
             };
-            if (context.Meetings.Any()) return;
+            
 
-            var meetings = new List<Meeting>
-            {
-                new Meeting
-                {
-                   Agenda="should we buy more products?",
-                   MeetingDate=DateTime.Now.AddMonths(-2),
-
-                },
-                new Meeting
-                {
-                   Agenda="should we add new products?",
-                   MeetingDate=DateTime.Now.AddMonths(-2),
-
-                },
-            };
+          
             await context.Products.AddRangeAsync(products);
-            await context.Meetings.AddRangeAsync(meetings);
+           
             await context.SaveChangesAsync();
         }
     }

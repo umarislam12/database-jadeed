@@ -99,6 +99,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsCancelled")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("MeetingDate")
                         .HasColumnType("TEXT");
 
