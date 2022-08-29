@@ -2,42 +2,41 @@
 import { format } from "date-fns";
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
-import { Product } from "../models/product";
-export default class ProductStore {
+import { Meeting } from "../models/meeting";
+export default class MeetingStore {
     // products: Product[] = [];
-    productRegistry = new Map<string, Product>();
+    meetingRegistry = new Map<string, Meeting>();
     loadingInitial = false;
     editMode = false;
     loading = false;
-    selectedProduct: Product | undefined = undefined;
+    selectedMeeting: Meeting | undefined = undefined;
     constructor() {
         makeAutoObservable(this)
     }
-    get ProductsByDate() {
-        return Array.from(this.productRegistry.values()).sort((a, b) =>
-           a.modified!.getTime() - b.modified!.getTime())
+    get MeetingsByDate() {
+        return Array.from(this.meetingRegistry.values()).sort((a, b) =>
+           a.meetingDate!.getTime() - b.meetingDate!.getTime())
     }
-    get groupedProducts() {
+    get groupedMeetings() {
         return Object.entries(
-            this.ProductsByDate.reduce((products, product) => {
-                const modified = format(product.modified!, 'dd MMM yyyy')
+            this.MeetingsByDate.reduce((meetings, meeting) => {
+                const meetingDate = format(meeting.meetingDate!, 'dd MMM yyyy')
                 // const modified = product.modified!. toISOString().split('T')[0];
-                products[modified] = products[modified] ?
-                    [...products[modified], product] : [product];
-                return products
-            }, {} as { [key: string]: Product[] })
+                meetings[meetingDate] = meetings[meetingDate] ?
+                    [...meetings[meetingDate], meeting] : [meeting];
+                return meetings
+            }, {} as { [key: string]: Meeting[] })
         )
     }
-    loadProducts = async () => {
+    loadMeetings = async () => {
         this.setloadingInitial(true);
         try {
-            const products = await agent.products.lists()
-            console.log(products);
-            products.forEach(product => {
-                this.setProduct(product);
+            const meetings = await agent.meetings.lists()
+            console.log(meetings[0]);
+            meetings.forEach(meeting => {
+                this.setMeeting(meeting);
                 // this.products.push(product)
             });
-            console.log(products);
             this.setloadingInitial(false);
         } catch (error) {
             console.log(error);
@@ -45,20 +44,20 @@ export default class ProductStore {
 
         }
     }
-    loadProduct = async (id: string) => {
-        let product = this.getProduct(id)
-        if (product) {
-            this.selectedProduct = product;
-            return product;
+    loadMeeting = async (id: string) => {
+        let meeting = this.getMeeting(id)
+        if (meeting) {
+            this.selectedMeeting = meeting;
+            return meeting;
         } else {
             this.loadingInitial = true;
             try {
-                product = await agent.products.deatails(id);
-                this.setProduct(product);
-                runInAction(() => this.selectedProduct = product)
+                meeting = await agent.meetings.deatails(id);
+                this.setMeeting(meeting);
+                runInAction(() => this.selectedMeeting = meeting)
 
                 this.setloadingInitial(false);
-                return product;
+                return meeting;
 
             } catch (error) {
                 console.log(error);
@@ -66,13 +65,14 @@ export default class ProductStore {
             }
         }
     }
-    private getProduct = (id: string) => {
-        return this.productRegistry.get(id);
+    private getMeeting = (id: string) => {
+        return this.meetingRegistry.get(id);
     }
-    private setProduct = (product: Product) => {
-        product.modified = new Date(product.modified!);
+    private setMeeting = (meeting: Meeting) => {
+        meeting.meetingDate = new Date(meeting.meetingDate!);
         //product.modified.split('T')[0];
-        this.productRegistry.set(product.id, product);
+        this.meetingRegistry.set(meeting.id, meeting);
+        
     }
     setloadingInitial = (state: boolean) => {
         this.loadingInitial = state;
@@ -92,14 +92,14 @@ export default class ProductStore {
     // closeForm = () => {
     //     this.editMode = false;
     // }
-    createProduct = async (product: Product) => {
+    createMeeting = async (meeting: Meeting) => {
         this.loading = true;
         try {
-            await agent.products.create(product);
+            await agent.meetings.create(meeting);
             runInAction(() => {
-                this.productRegistry.set(product.id, product);
+                this.meetingRegistry.set(meeting.id, meeting);
                 //this.products.push(product);
-                this.selectedProduct = product;
+                this.selectedMeeting = meeting;
                 this.editMode = false;
                 this.loading = false;
             })
@@ -110,14 +110,14 @@ export default class ProductStore {
             })
         }
     }
-    updateProduct = async (product: Product) => {
+    updateMeeting = async (meeting: Meeting) => {
         this.loading = true;
         try {
-            await agent.products.update(product);
+            await agent.meetings.update(meeting);
             runInAction(() => {
                 // this.products=[...this.products.filter(p=>p.id !==product.id),product];
-                this.productRegistry.set(product.id, product);
-                this.selectedProduct = product;
+                this.meetingRegistry.set(meeting.id, meeting);
+                this.selectedMeeting = meeting;
                 this.editMode = false;
                 this.loading = false;
 
@@ -131,12 +131,12 @@ export default class ProductStore {
         }
 
     }
-    deleteProduct = async (id: string) => {
+    deleteMeeting = async (id: string) => {
         this.loading = true;
         try {
-            await agent.products.delete(id);
+            await agent.meetings.delete(id);
             runInAction(() => {
-                this.productRegistry.delete(id);
+                this.meetingRegistry.delete(id);
                 //this.products=[...this.products.filter(p=>p.id !=id)];
                 //if product is being desplayed
                 // if (this.selectedProduct !== undefined) {

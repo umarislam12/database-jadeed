@@ -16,6 +16,8 @@ import LoginForm from "../../features/users/LoginForm";
 import { useStore } from "../stores/store";
 import LoadingComponent from "./LoadingComponent";
 import ModalContainer from "../common/modals/ModalContainer";
+import MeetingDashboard from "../../features/meetings/dashboard/MeetingDashboard";
+import MeetingDetails from "../../features/meetings/details/MeetingDetails";
 
 function App() {
   const location = useLocation();
@@ -46,6 +48,9 @@ function App() {
               {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
               <Switch>
                 <Route path="/products" exact component={ProductDashboard} />
+                <Route path="/meetings" exact component={MeetingDashboard} />
+               
+                <Route path="/meetings/:id" component={MeetingDetails} />
                 <Route path="/products/:id" component={ProductDetails} />
                 <Route
                   key={location.key}
@@ -55,6 +60,10 @@ function App() {
                 <Route path="/errors" component={TestErrors} />
                 <Route path="/server-error" component={ServerError} />
                 <Route path="/login" component={LoginForm} />
+                
+
+
+               
                 <Route component={NotFound} />
               </Switch>
             </Container>

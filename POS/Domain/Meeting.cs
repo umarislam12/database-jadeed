@@ -12,6 +12,7 @@ namespace Domain
         public string Agenda { get; set; }
         public DateTime MeetingDate { get; set; }
         public bool IsCancelled { get; set; }
+        public string HostUsername { get; set; }
         public ICollection<UserMeeting> Attendees { get; set; } = new List<UserMeeting>();
     }
 }

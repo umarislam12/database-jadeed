@@ -15,13 +15,14 @@ export default observer(function NavBar() {
                     POS
                 </Menu.Item>
                 <Menu.Item as={NavLink} to='/products' name="Product" />
+                <Menu.Item as={NavLink} to='/meetings' name="Meeting" />
                 <Menu.Item as={NavLink} to='/errors' name='Errors'>Errors</Menu.Item>
                 <Menu.Item >
                     <Button positive content='create product' as={NavLink} to='/createProduct'/>
                 </Menu.Item>
                 <Menu.Item position='right'> 
                 <Image src={user && user.image || '/assets/user.png'} avatar spaced='right'/></Menu.Item>
-                <Dropdown pointing='top left' text={ user! && user.displayName}>
+                <Dropdown pointing='top left' text={ user! && user.username}>
                     <DropdownMenu>
                     
                     <Dropdown.Item  as={Link} to={`/profile/${user && user.username}`} text='my profile' icon='user'/>

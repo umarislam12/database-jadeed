@@ -1,38 +1,39 @@
+import { observer } from 'mobx-react-lite'
 import React from 'react'
-import { observer } from 'mobx-react-lite';
+import { Meeting } from '../../../app/models/meeting'
 import {Button, Header, Item, Segment, Image} from 'semantic-ui-react';
-import { Product } from '../../../app/models/product';
-import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
-const productImageStyle = {
-  filter: 'brightness(30%)'
-};
-const productImageTextStyle = {
-  position: 'absolute',
-  bottom: '5%',
-  left: '5%',
-  width: '100%',
-  height: 'auto',
-  color: 'white'
-};
-interface Props {
-  product: Product
+import { Link } from 'react-router-dom';
+const meetingImageStyle = {
+    filter: 'brightness(30%)'
+  };
+  const meetingImageTextStyle = {
+    position: 'absolute',
+    bottom: '5%',
+    left: '5%',
+    width: '100%',
+    height: 'auto',
+    color: 'white'
+  };
+interface Props{
+    meeting:Meeting
 }
-export default observer(function ProductDetailedHeader({product}:Props) {
+
+export default observer(function MeetingDetailedHeader({meeting}:Props) {
   return (
     <Segment.Group>
     <Segment basic attached='top' style={{padding: '0'}}>
-        <Image src={`/assets/categoryImages/${product.category}.jpg`} fluid style={productImageStyle}/>
-        <Segment style={productImageTextStyle} basic>
+        <Image src={`/assets/categoryImages/${meeting.attendees}.jpg`} fluid style={meetingImageStyle}/>
+        <Segment style={meetingImageTextStyle} basic>
             <Item.Group>
                 <Item>
                     <Item.Content>
                         <Header
                             size='huge'
-                            content={product.productName}
+                            content={meeting.agenda}
                             style={{color: 'white'}}
                         />
-                        <p>{format(product.modified!, 'dd MMM yyyy')}</p>
+                        <p>{format(meeting.meetingDate!, 'dd MMM yyyy')}</p>
                         <p>
                             Hosted by <strong>Bob</strong>
                         </p>
@@ -44,7 +45,7 @@ export default observer(function ProductDetailedHeader({product}:Props) {
     <Segment clearing attached='bottom'>
         <Button color='teal'>Join Activity</Button>
         <Button>Cancel attendance</Button>
-        <Button color='orange' floated='right' as={Link} to={`/manage/${product.id}`}>
+        <Button color='orange' floated='right' as={Link} to={`/manage/${meeting.id}`}>
             Manage Product
         </Button>
     </Segment>
