@@ -1,4 +1,5 @@
-﻿using Application.Meetings;
+﻿using Application.Comments;
+using Application.Meetings;
 using AutoMapper;
 using Domain;
 using System;
@@ -15,14 +16,23 @@ namespace Application.Core
         {
             CreateMap<Product, Product>();
             CreateMap<Meeting, Meeting>();
+            
             CreateMap<Meeting, MeetingDto>()
                 .ForMember(d => d.HostUsername, o => o.MapFrom(s => s.Attendees
                       .FirstOrDefault(x => x.IsCovener).AppUser.UserName));
-            CreateMap<UserMeeting, Profiles.Profile>()
+            CreateMap<UserMeeting, AttendeeDto>()
                 .ForMember(d => d.DisplayName, o => o.MapFrom(s => s.AppUser.DisplayName))
                 .ForMember(d => d.Username, o => o.MapFrom(s => s.AppUser.UserName))
-                .ForMember(d => d.Bio, o => o.MapFrom(s => s.AppUser.Bio));
+                .ForMember(d => d.Bio, o => o.MapFrom(s => s.AppUser.Bio))
+                .ForMember(d => d.Image, o => o.MapFrom(s => s.AppUser.Photos.FirstOrDefault(x => x.IsMain).Url));
 
+            CreateMap<AppUser, Profiles.Profile>()
+                .ForMember(d => d.Image, o => o.MapFrom(s => s.Photos.FirstOrDefault(x => x.IsMain).Url));
+
+            CreateMap<Comment, CommentDto>()
+                .ForMember(d => d.Username, o => o.MapFrom(u => u.Author.UserName))
+                .ForMember(d => d.DisplayName, o => o.MapFrom(n => n.Author.DisplayName))
+                .ForMember(d => d.Image, o => o.MapFrom(i => i.Author.Photos.FirstOrDefault(x => x.IsMain).Url));
 
         }
 

@@ -19,5 +19,6 @@
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
         public ICollection<ProductSupplier> Suppliers { get; set; }
+        public ICollection<OrderDetail> Orders { get; set; }
     }
 }

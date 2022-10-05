@@ -20,7 +20,7 @@ export default function productListItem({ product }: Props) {
             <Segment>
                 <Item.Group>
                     <Item>
-                        <Item.Image size='tiny' circular src='/assets/user.png'>
+                        <Item.Image size='tiny' style={{marginBottom:3}} circular src='/assets/user.png'>
                             <Item.Content>
                                 <Item.Header as={Link} to={`/products/${product.id}`}>
                                     {product.productName}

@@ -18,6 +18,9 @@ import LoadingComponent from "./LoadingComponent";
 import ModalContainer from "../common/modals/ModalContainer";
 import MeetingDashboard from "../../features/meetings/dashboard/MeetingDashboard";
 import MeetingDetails from "../../features/meetings/details/MeetingDetails";
+import ProfilePage from "../../features/profile/ProfilePage";
+
+
 
 function App() {
   const location = useLocation();
@@ -57,6 +60,7 @@ function App() {
                   path={["/createProduct", "/manage/:id"]}
                   component={ProductForm}
                 />
+                <Route path="/profiles/:username" component={ProfilePage} />
                 <Route path="/errors" component={TestErrors} />
                 <Route path="/server-error" component={ServerError} />
                 <Route path="/login" component={LoginForm} />

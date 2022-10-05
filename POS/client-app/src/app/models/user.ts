@@ -11,3 +11,7 @@ export interface UserFormValues{
     displayName?: string;
     username?: string
 }
+export interface AboutFormValues{
+    DisplayName:string;
+    Bio?:string;
+}

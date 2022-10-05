@@ -34,7 +34,7 @@ namespace Application.Meetings
                 var meeting=await _context.Meetings
                     .Include(a => a.Attendees)
                     .ThenInclude(u => u.AppUser)
-                    .SingleOrDefaultAsync(x=>x.Id==request.Id);
+                    .SingleOrDefaultAsync(x=> x.Id==request.Id);
                 if (meeting == null) return null;
 
                 var user = await _context.Users.FirstOrDefaultAsync(x => 

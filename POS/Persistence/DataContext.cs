@@ -20,6 +20,11 @@ namespace Persistence
         public DbSet<ProductSupplier> ProductSuppliers { get; set; }
         public DbSet<Meeting> Meetings { get; set; }
         public DbSet<UserMeeting> UserMeetings { get; set; }
+        public DbSet <Photo> Photos { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -28,13 +33,13 @@ namespace Persistence
             builder.Entity<ProductSupplier>()
                 .HasOne(p => p.Product)
                 .WithMany(s => s.Suppliers)
-                .HasForeignKey(aa => aa.SupplierId);
+                .HasForeignKey(aa => aa.ProductId);
             builder.Entity<ProductSupplier>()
                 .HasOne(s => s.Supplier)
                 .WithMany(p => p.Products)
-                .HasForeignKey(aa => aa.ProductId);
+                .HasForeignKey(aa => aa.SupplierId);
 
-            base.OnModelCreating(builder);
+            
            
             builder.Entity<UserMeeting>(x => x.HasKey(aa => new { aa.AppUserId, aa.MeetingId }));
             builder.Entity<UserMeeting>()
@@ -45,7 +50,21 @@ namespace Persistence
                 .HasOne(m => m.Meeting)
                 .WithMany(u => u.Attendees)
                 .HasForeignKey(aa => aa.MeetingId);
-                
+
+            builder.Entity<OrderDetail>(x => x.HasKey(aa => new { aa.OrderId, aa.ProductId }));
+            builder.Entity<OrderDetail>()
+                .HasOne(o=>o.Order)
+                .WithMany(p=> p.ProductsDetails)
+                .HasForeignKey(aa=>aa.OrderId);
+            builder.Entity<OrderDetail>()
+              .HasOne(o => o.Product)
+              .WithMany(o => o.Orders)
+              .HasForeignKey(aa => aa.ProductId);
+
+            builder.Entity<Comment>()
+            .HasOne(m=>m.Meeting)
+            .WithMany(c=>c.Comments)
+            .OnDelete(DeleteBehavior.Cascade);    
         }
     }
 }

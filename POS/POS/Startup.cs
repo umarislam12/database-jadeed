@@ -21,6 +21,7 @@ using Microsoft.OpenApi.Models;
 using Persistence;
 using POS.Extensions;
 using POS.Middleware;
+using POS.SignalR;
 
 namespace POS
 {
@@ -76,6 +77,7 @@ namespace POS
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("/chat");
             });
         }
     }

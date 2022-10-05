@@ -39,6 +39,7 @@ namespace Persistence
                     {
                        Agenda="should we buy more products?",
                        MeetingDate=DateTime.Now.AddMonths(-2),
+                     
                        Attendees= new List<UserMeeting>
                        {
                            new UserMeeting
@@ -52,6 +53,7 @@ namespace Persistence
                     {
                        Agenda="should we go to china?",
                        MeetingDate=DateTime.Now.AddMonths(-2),
+                       
                        Attendees= new List<UserMeeting>
                        {
                            new UserMeeting

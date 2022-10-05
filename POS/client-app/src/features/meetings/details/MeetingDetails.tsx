@@ -24,10 +24,10 @@ export default observer(function MeetingDetails(){
   <Grid.Column width={10}>
     <MeetingDetailedHeader meeting={meeting}/>
     <MeetingDetailedInfo meeting={meeting}/>
-    <MeetingDetailedChat/>
+    <MeetingDetailedChat meetingId={meeting.id}/>
   </Grid.Column>
     <Grid.Column width={6}>
-      <MeetingDetailedSidebar/>
+      <MeetingDetailedSidebar meeting={meeting}/>
     </Grid.Column>
 </Grid>
     );

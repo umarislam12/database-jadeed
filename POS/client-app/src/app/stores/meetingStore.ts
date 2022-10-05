@@ -3,6 +3,8 @@ import { format } from "date-fns";
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
 import { Meeting } from "../models/meeting";
+import { Profile } from "../models/profile";
+import { store } from "./store";
 export default class MeetingStore {
     // products: Product[] = [];
     meetingRegistry = new Map<string, Meeting>();
@@ -32,7 +34,7 @@ export default class MeetingStore {
         this.setloadingInitial(true);
         try {
             const meetings = await agent.meetings.lists()
-            console.log(meetings[0]);
+            console.log(meetings);
             meetings.forEach(meeting => {
                 this.setMeeting(meeting);
                 // this.products.push(product)
@@ -69,6 +71,18 @@ export default class MeetingStore {
         return this.meetingRegistry.get(id);
     }
     private setMeeting = (meeting: Meeting) => {
+        const user=store.userStore.user;
+       if(user){
+            meeting.isGoing=meeting.attendees!.some(
+                a=>a.username===user!.username
+                )
+            meeting.isHost= meeting.hostUsername === user.username;
+            meeting.host=meeting.attendees && meeting.attendees.find(x=>x.username===meeting.hostUsername);
+       }
+       
+        
+        
+        
         meeting.meetingDate = new Date(meeting.meetingDate!);
         //product.modified.split('T')[0];
         this.meetingRegistry.set(meeting.id, meeting);
@@ -149,6 +163,30 @@ export default class MeetingStore {
             runInAction(() => {
                 this.loading = false;
             })
+        }
+    }
+    updateAttendence= async ()=>{
+        const user=store.userStore.user;
+        this.loading=true;
+        console.log(this.selectedMeeting);
+        try {
+            await agent.meetings.attend(this.selectedMeeting!.id);
+            runInAction(()=>{
+               if( this.selectedMeeting!.isGoing){
+                this.selectedMeeting!.attendees= this.selectedMeeting!.attendees!.
+                filter(x=>x.username !==  user!.username);
+                this.selectedMeeting!.isGoing=false;
+               }else{
+                const attendee= new Profile(user!);
+                this.selectedMeeting!.attendees!.push(attendee);
+                this.selectedMeeting!.isGoing=true;
+               }
+               this.meetingRegistry.set(this.selectedMeeting!.id, this.selectedMeeting!)
+            })
+        } catch (error) {
+            console.log(error);
+        }finally{
+            runInAction(()=>this.loading=false)
         }
     }
 }

@@ -12,7 +12,7 @@ namespace POS.Controllers
 
     public class MeetingsController : BaseApiController
     {
-        [AllowAnonymous]
+        
         [HttpGet]
         public async Task<IActionResult> GetMeetings(){
             return resultHandler(await Mediator.Send(new List.Query()));

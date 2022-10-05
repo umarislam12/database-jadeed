@@ -7,13 +7,14 @@ import MeetingListItem from "./MeetingListItem";
 export default observer(function MeetingList() {
   const { meetingStore } = useStore();
   const { groupedMeetings } = meetingStore;
+
   return (
     <>
       <h1> meeting list</h1>
-      {groupedMeetings.map(([group, meetings]) => (
-        <Fragment key={group}>
+      {groupedMeetings.map(([dat, meetings]) => (
+        <Fragment key={dat}>
           <Header sub color="teal">
-            {group}
+            {dat}
           </Header>
 
           {meetings.map((meeting) => (

@@ -5,7 +5,9 @@ import { history } from "../..";
 import { Meeting } from "../models/meeting";
 
 import { Product } from "../models/product";
-import { User, UserFormValues } from "../models/user";
+import { Photo, Profile } from "../models/profile";
+
+import { AboutFormValues, User, UserFormValues } from "../models/user";
 import { store } from "../stores/store";
 const sleep = (delay: number) => {
   return new Promise((resolve) => {
@@ -72,23 +74,25 @@ const requests = {
   put: <T>(url: string, body: {}) => axios.put<T>(url).then(responseBody),
   post: <T>(url: string, body: {}) =>
     axios.post<T>(url, body).then(responseBody),
-  del: <T>(url: string) => axios.put<T>(url).then(responseBody),
+  del: <T>(url: string) => axios.delete<T>(url).then(responseBody),
 };
 const products = {
   lists: () => requests.get<Product[]>("/products"),
   deatails: (id: string) => requests.get<Product>(`/products/${id}`),
   create: (product: Product) => axios.post<void>("/products", product),
   update: (product: Product) =>
-    axios.put<void>(`/products/${product.id}`, product),
+    requests.put<void>(`/products/${product.id}`, product),
   delete: (id: string) => axios.delete<void>(`/products/${id}`),
 };
 const meetings = {
   lists: () => requests.get<Meeting[]>("/meetings"),
   deatails: (id: string) => requests.get<Meeting>(`/meetings/${id}`),
-  create: (meeting: Meeting) => axios.post<void>("/meetings", meeting),
+  create: (meeting: Meeting) => requests.post<void>("/meetings", meeting),
   update: (meeting: Meeting) =>
     axios.put<void>(`/meetings/${meeting.id}`, meeting),
-  delete: (id: string) => axios.delete<void>(`/meetings/${id}`),
+  delete: (id: string) => requests.del<void>(`/meetings/${id}`),
+  attend:(id:string)=>requests.post<void>(`/meetings/${id}/attend`, {})
+
 };
 const Account = {
   current: () => requests.get<User>("/account"),
@@ -96,9 +100,23 @@ const Account = {
   register: (user: UserFormValues) =>
     requests.post<User>("account/register", user),
 };
+const Profiles={
+  get:(username:string)=>requests.get<Profile>(`/profiles/${username}`),
+  uploadPhoto:(file:Blob)=>{
+    let formData=new FormData();
+    formData.append('File',file);
+    return axios.post<Photo>('photos',formData,{
+      headers:{'Content-type':'multipart/form-data'}
+    })
+  },
+  setMainPhoto:(id: string)=>requests.post(`/photos/${id}/setMain`,{}),
+  deletePhoto:(id:string)=>requests.del(`/photos/${id}`),
+  updateAbout:(userAbout: AboutFormValues)=>axios.put<void>(`/profiles`,userAbout)
+}
 const agent = {
   products,
   Account,
-  meetings
+  meetings,
+  Profiles
 };
 export default agent;
