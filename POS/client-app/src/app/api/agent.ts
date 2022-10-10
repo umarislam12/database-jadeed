@@ -2,9 +2,9 @@ import axios, { AxiosError, AxiosResponse } from "axios";
 import { toast } from "react-toastify";
 
 import { history } from "../..";
-import { Meeting } from "../models/meeting";
+import { Meeting, MeetingFormValues } from "../models/meeting";
 
-import { Product } from "../models/product";
+import { Product, ProductFormValues } from "../models/product";
 import { Photo, Profile } from "../models/profile";
 
 import { AboutFormValues, User, UserFormValues } from "../models/user";
@@ -79,16 +79,16 @@ const requests = {
 const products = {
   lists: () => requests.get<Product[]>("/products"),
   deatails: (id: string) => requests.get<Product>(`/products/${id}`),
-  create: (product: Product) => axios.post<void>("/products", product),
-  update: (product: Product) =>
+  create: (product: ProductFormValues) => axios.post<void>("/products", product),
+  update: (product: ProductFormValues) =>
     requests.put<void>(`/products/${product.id}`, product),
   delete: (id: string) => axios.delete<void>(`/products/${id}`),
 };
 const meetings = {
   lists: () => requests.get<Meeting[]>("/meetings"),
   deatails: (id: string) => requests.get<Meeting>(`/meetings/${id}`),
-  create: (meeting: Meeting) => requests.post<void>("/meetings", meeting),
-  update: (meeting: Meeting) =>
+  create: (meeting: MeetingFormValues) => requests.post<void>("/meetings", meeting),
+  update: (meeting: MeetingFormValues) =>
     axios.put<void>(`/meetings/${meeting.id}`, meeting),
   delete: (id: string) => requests.del<void>(`/meetings/${id}`),
   attend:(id:string)=>requests.post<void>(`/meetings/${id}/attend`, {})

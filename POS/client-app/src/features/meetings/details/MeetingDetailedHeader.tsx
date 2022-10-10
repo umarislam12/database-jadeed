@@ -54,14 +54,14 @@ export default observer(function MeetingDetailedHeader({ meeting }: Props) {
             color="orange"
             floated="right"
             as={Link}
-            to={`/manage/${meeting.id}`}
+            to={`/manageMeeting/${meeting.id}`}
           >
             Manage Meeting
           </Button>
         ) : meeting.isGoing ? (
-          <Button onClick={updateAttendence}>Cancel attendance</Button>
+          <Button loading={loading} onClick={updateAttendence}>Cancel attendance</Button>
         ) : (
-          <Button onClick={updateAttendence} color="teal">Join Activity</Button>
+          <Button loading={loading} onClick={updateAttendence} color="teal">Join Activity</Button>
         )}
       </Segment>
     </Segment.Group>

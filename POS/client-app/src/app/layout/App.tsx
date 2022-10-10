@@ -19,6 +19,7 @@ import ModalContainer from "../common/modals/ModalContainer";
 import MeetingDashboard from "../../features/meetings/dashboard/MeetingDashboard";
 import MeetingDetails from "../../features/meetings/details/MeetingDetails";
 import ProfilePage from "../../features/profile/ProfilePage";
+import MeetingForm from "../../features/products/form/MeetingForm";
 
 
 
@@ -56,9 +57,16 @@ function App() {
                 <Route path="/meetings/:id" component={MeetingDetails} />
                 <Route path="/products/:id" component={ProductDetails} />
                 <Route
+                exact
                   key={location.key}
                   path={["/createProduct", "/manage/:id"]}
                   component={ProductForm}
+                />
+                 <Route
+                 exact
+                  key={location.key}
+                  path={["/createMeeting", "/manageMeeting/:id"]}
+                  component={MeetingForm}
                 />
                 <Route path="/profiles/:username" component={ProfilePage} />
                 <Route path="/errors" component={TestErrors} />

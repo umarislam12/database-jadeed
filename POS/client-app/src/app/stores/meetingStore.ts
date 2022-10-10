@@ -2,7 +2,7 @@
 import { format } from "date-fns";
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
-import { Meeting } from "../models/meeting";
+import { Meeting, MeetingFormValues } from "../models/meeting";
 import { Profile } from "../models/profile";
 import { store } from "./store";
 export default class MeetingStore {
@@ -106,42 +106,46 @@ export default class MeetingStore {
     // closeForm = () => {
     //     this.editMode = false;
     // }
-    createMeeting = async (meeting: Meeting) => {
-        this.loading = true;
+    createMeeting = async (meeting: MeetingFormValues) => {
+        var user=store.userStore.user;
+        const attendee=new Profile(user!);
+        
         try {
             await agent.meetings.create(meeting);
+             const newMeeting=new Meeting(meeting);
+             newMeeting.hostUsername=user!.username;
+             newMeeting.attendees=[attendee];
+             this.setMeeting(newMeeting);
             runInAction(() => {
-                this.meetingRegistry.set(meeting.id, meeting);
+                // this.meetingRegistry.set(meeting.id, meeting);
                 //this.products.push(product);
-                this.selectedMeeting = meeting;
-                this.editMode = false;
-                this.loading = false;
+                this.selectedMeeting = newMeeting
+               
             })
         } catch (error) {
             console.log(error);
-            runInAction(() => {
-                this.loading = false;
-            })
+           
         }
     }
-    updateMeeting = async (meeting: Meeting) => {
-        this.loading = true;
+    updateMeeting = async (meeting: MeetingFormValues) => {
+       
         try {
             await agent.meetings.update(meeting);
             runInAction(() => {
+                if(meeting.id){
+                    let updatedMeeting={...this.getMeeting(meeting.id), ...meeting}
+                    this.meetingRegistry.set(meeting.id, updatedMeeting as Meeting);
+                    this.selectedMeeting = updatedMeeting as Meeting;
+                }
                 // this.products=[...this.products.filter(p=>p.id !==product.id),product];
-                this.meetingRegistry.set(meeting.id, meeting);
-                this.selectedMeeting = meeting;
-                this.editMode = false;
-                this.loading = false;
+                // this.editMode = false;
+                // this.loading = false;
 
             })
 
         } catch (error) {
             console.log(error);
-            runInAction(() => {
-                this.loading = false;
-            })
+          
         }
 
     }

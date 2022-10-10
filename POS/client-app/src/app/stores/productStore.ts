@@ -2,7 +2,7 @@
 import { format } from "date-fns";
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
-import { Product } from "../models/product";
+import { Product, ProductFormValues } from "../models/product";
 export default class ProductStore {
     // products: Product[] = [];
     productRegistry = new Map<string, Product>();
@@ -92,34 +92,37 @@ export default class ProductStore {
     // closeForm = () => {
     //     this.editMode = false;
     // }
-    createProduct = async (product: Product) => {
-        this.loading = true;
+    createProduct = async (product: ProductFormValues) => {
+        
+       // this.loading = true;
         try {
             await agent.products.create(product);
-            runInAction(() => {
-                this.productRegistry.set(product.id, product);
-                //this.products.push(product);
-                this.selectedProduct = product;
-                this.editMode = false;
-                this.loading = false;
-            })
+           var newProduct=new Product(product);
+           this.setProduct(newProduct);
+           runInAction(()=>{
+            this.selectedProduct=newProduct;
+           })
         } catch (error) {
             console.log(error);
-            runInAction(() => {
-                this.loading = false;
-            })
+           
         }
     }
-    updateProduct = async (product: Product) => {
-        this.loading = true;
+    updateProduct = async (product: ProductFormValues) => {
+        //this.loading = true;
         try {
             await agent.products.update(product);
+
             runInAction(() => {
+                if(product.id){
+                    var updatedProduct={...this.getProduct(product.id), ...product}
+                    this.productRegistry.set(product.id, updatedProduct as Product)
+                    this.selectedProduct=updatedProduct as Product;
+                }
                 // this.products=[...this.products.filter(p=>p.id !==product.id),product];
-                this.productRegistry.set(product.id, product);
-                this.selectedProduct = product;
-                this.editMode = false;
-                this.loading = false;
+                // this.productRegistry.set(product.id, product);
+                // this.selectedProduct = product;
+                // this.editMode = false;
+                // this.loading = false;
 
             })
 

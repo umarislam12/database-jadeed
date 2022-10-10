@@ -1,13 +1,13 @@
 import { observer } from "mobx-react-lite";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import { Button, FormField, Header, Label, Segment } from "semantic-ui-react";
+import { Button, Header, Segment } from "semantic-ui-react";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
-import { Product } from "../../../app/models/product";
+import { ProductFormValues } from "../../../app/models/product";
 import { useStore } from "../../../app/stores/store";
 import { v4 as uuid } from "uuid";
-import { Formik , Form, Field, ErrorMessage} from "formik";
-import * as Yup from 'yup';
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
 import MyTextInput from "../../../app/common/form/MyTextInput";
 import MyTextArea from "../../../app/common/form/MyTextArea";
 import MySelectInput from "../../../app/common/form/MySelectInput";
@@ -24,39 +24,30 @@ export default observer(function ProductForm() {
     loadingInitial,
   } = productStore;
   const { id } = useParams<{ id: string }>();
-  const [product, setProduct] = useState<Product>({
-    id: "",
-    productName: "",
-    productNumber: "",
-    description: "",
-    qtyStock: 0,
-    brand: "",
-    category: "",
-    cost: 0,
-    vandor: "",
-    wholesalePrice: 0,
-    retailPrice: 0,
-    packed: false,
-    created: "1970-01-01T00:00:01",
-    modified: null
+  const [product, setProduct] = useState<ProductFormValues>(
+    new ProductFormValues()
+  );
+  const validationSchema = Yup.object({
+    productName: Yup.string().required("product name is required"),
+    productNumber: Yup.string().required("product name is required"),
+    description: Yup.string().required('required'),
+    qtyStock: Yup.number()
+      .required("qty is required"),
+    brand: Yup.string().required('required'),
+    category: Yup.string().required('required'),
+    cost: Yup.number().required('required'),
+    vandor: Yup.string().required('required'),
+    wholesalePrice: Yup.number().required('required'),
+    retailPrice: Yup.number().required('required'),
+    packed: Yup.boolean().required('required'),
+    created: Yup.string().required('required'),
+    modified: Yup.string().required('required'),
   });
-const validationSchema= Yup.object({
-productName:Yup.string().required('product name is required'),
-productNumber:Yup.string().required('product name is required'),
-description:Yup.string().required(),
-qtyStock:Yup.number().required("qty is required").nullable(),
-brand:Yup.string().required(),
-category:Yup.string().required(),
-cost:Yup.number().required(),
-vandor:Yup.string().required(),
-wholesalePrice:Yup.number().required(),
-retailPrice:Yup.number().required(),
-packed:Yup.boolean().required(),
-created:Yup.string().required(),
-modified: Yup.string().required(),
-})
   useEffect(() => {
-    if (id) loadProduct(id).then((product) => setProduct(product!));
+    if (id)
+      loadProduct(id).then((product) =>
+        setProduct(new ProductFormValues(product))
+      );
   }, [id, loadProduct]);
 
   // function handleSubmit() {
@@ -78,23 +69,36 @@ modified: Yup.string().required(),
   //     const { name, value } = event.target;
   //     setProduct({ ...product, [name]: value })
   // }
-  function handleFormSubmit(product: Product){
-
+  function handleFormSubmit(product: ProductFormValues) {
+    if (!product.id) {
+      let newProduct = {
+        ...product,
+        id: uuid(),
+      };
+      createProduct(newProduct).then(() =>
+        history.push(`/products/${newProduct.id}`)
+      );
+    } else {
+      updateProduct(product).then(() =>
+        history.push(`/products/${product.id}`)
+      );
+    }
   }
+
   if (loadingInitial)
     return <LoadingComponent content="loading component..." />;
   return (
     <Segment clearing>
-      <Header content='product details' sub color="teal" />
+      <Header content="product details" sub color="teal" />
       <Formik
-      validationSchema={validationSchema}
-      enableReinitialize
+        validationSchema={validationSchema}
+        enableReinitialize
         initialValues={product}
         onSubmit={(values) => handleFormSubmit(values)}
       >
-        {({  handleSubmit, isValid, isSubmitting,dirty }) => (
-          <Form className='ui form'onSubmit={handleSubmit} autoComplete="off">
-            <MyTextInput name='productName' placeholder="productName" />
+        {({ handleSubmit, isValid, isSubmitting, dirty }) => (
+          <Form className="ui form" onSubmit={handleSubmit} autoComplete="off">
+            <MyTextInput name="productName" placeholder="productName" />
             {/* <FormField>
             <Field
               placeholder="productName"
@@ -104,73 +108,33 @@ modified: Yup.string().required(),
             <ErrorMessage name='productName' render={error=> <Label basic color="red" content={error} />
             }/>
             </FormField> */}
-           
-            <MyTextInput
-              placeholder="productNumber"
-              name="productNumber"
-                           
-            />
-            <MyTextArea
-              placeholder="description"
-              name="description"
-                     rows={3}    
-            />
-            <MyTextInput
-              placeholder="qtyStock"
-              name="qtyStock"
-                      
-            />
-            <MyTextInput
-              placeholder="brand"
-              name="brand"
-                   
-            />
+
+            <MyTextInput placeholder="productNumber" name="productNumber" />
+            <MyTextArea placeholder="description" name="description" rows={3} />
+            <MyTextInput placeholder="qtyStock" name="qtyStock" />
+            <MyTextInput placeholder="brand" name="brand" />
             <MySelectInput
-            options={categoryOptions}
+              options={categoryOptions}
               placeholder="category"
               name="category"
-                      
             />
-            <MyTextInput
-              placeholder="cost"
-              name="cost"
-                  
-            />
-            <MyTextInput
-              placeholder="vandor"
-              name="vandor"
-                    
-            />
-            <MyTextInput
-              placeholder="wholesalePrice"
-              name="wholesalePrice"
-             
-              
-            />
-            <MyTextInput
-              placeholder="retailPrice"
-              name="retailPrice"
-                         
-            />
-            <MyTextInput
-              placeholder="packed"
-              name="packed"
-                    
-            />
-                  <Header content='modified details' sub color="teal" />
+            <MyTextInput placeholder="cost" name="cost" />
+            <MyTextInput placeholder="vandor" name="vandor" />
+            <MyTextInput placeholder="wholesalePrice" name="wholesalePrice" />
+            <MyTextInput placeholder="retailPrice" name="retailPrice" />
+            <MyTextInput placeholder="packed" name="packed" />
+            <Header content="modified details" sub color="teal" />
 
             <MyDateInput
-              
-             
               placeholderText="modified"
               name="modified"
-                 showTimeSelect  
-                 timeCaption="time"
-                 dateFormat="MMMM d, yyyy h:mm aa"   
+              showTimeSelect
+              timeCaption="time"
+              dateFormat="MMMM d, yyyy h:mm aa"
             />
             <Button
-            disabled={isSubmitting || !dirty || !isValid}
-              loading={loading}
+              disabled={isSubmitting || !dirty || !isValid}
+              loading={isSubmitting}
               floated="right"
               positive
               type="submit"
