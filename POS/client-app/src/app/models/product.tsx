@@ -11,7 +11,7 @@ export interface Product {
   wholesalePrice: number;
   retailPrice: number;
   packed: boolean;
-  created: string;
+  created: Date | null;
   modified: Date | null;
 }
 export class Product implements Product {
@@ -35,7 +35,7 @@ export class ProductFormValues {
   wholesalePrice: number = 0;
   retailPrice: number = 0;
   packed: boolean = false;
-  created: string = "";
+  created: Date | null = null;
   modified: Date | null  = null;
   constructor(product?: ProductFormValues) {
     if (product) {
@@ -51,7 +51,7 @@ export class ProductFormValues {
       this.wholesalePrice = product.wholesalePrice;
       this.retailPrice = product.retailPrice;
       this.packed = product.packed;
-      this.created = product.created;
+       this.created = product.created;
       this.modified = product.modified;
     }
   }

@@ -193,4 +193,15 @@ export default class MeetingStore {
             runInAction(()=>this.loading=false)
         }
     }
+    cancelMeetingToggle=async () =>{
+        this.loading=true;
+        try {
+            await agent.meetings.attend(this.selectedMeeting!.id)
+            
+        } catch (error) {
+            console.log(error)
+        } finally {
+            runInAction(()=>this.loading=false);
+        }
+    }
 }

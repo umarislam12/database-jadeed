@@ -20,6 +20,9 @@ export default observer(function NavBar() {
                 <Menu.Item >
                     <Button positive content='create product' as={NavLink} to='/createProduct'/>
                 </Menu.Item>
+                <Menu.Item >
+                    <Button positive content='create meeting' as={NavLink} to='/createMeeting'/>
+                </Menu.Item>
                 <Menu.Item position='right'> 
                 <Image src={user && user.image || '/assets/user.png'} avatar spaced='right'/></Menu.Item>
                 <Dropdown pointing='top left' text={ user! && user.username}>

@@ -79,7 +79,7 @@ const requests = {
 const products = {
   lists: () => requests.get<Product[]>("/products"),
   deatails: (id: string) => requests.get<Product>(`/products/${id}`),
-  create: (product: ProductFormValues) => axios.post<void>("/products", product),
+  create: (product: ProductFormValues) => requests.post<void>("/products", product),
   update: (product: ProductFormValues) =>
     requests.put<void>(`/products/${product.id}`, product),
   delete: (id: string) => axios.delete<void>(`/products/${id}`),

@@ -29,7 +29,7 @@ export default observer(function ProductForm() {
   );
   const validationSchema = Yup.object({
     productName: Yup.string().required("product name is required"),
-    productNumber: Yup.string().required("product name is required"),
+    productNumber: Yup.string().required("product number is required"),
     description: Yup.string().required('required'),
     qtyStock: Yup.number()
       .required("qty is required"),
@@ -40,7 +40,7 @@ export default observer(function ProductForm() {
     wholesalePrice: Yup.number().required('required'),
     retailPrice: Yup.number().required('required'),
     packed: Yup.boolean().required('required'),
-    created: Yup.string().required('required'),
+  
     modified: Yup.string().required('required'),
   });
   useEffect(() => {
