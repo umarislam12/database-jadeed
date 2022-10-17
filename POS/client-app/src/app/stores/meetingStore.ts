@@ -204,4 +204,7 @@ export default class MeetingStore {
             runInAction(()=>this.loading=false);
         }
     }
+    clearSelectedMeeting=()=>{
+        this.selectedMeeting=undefined;
+    }
 }

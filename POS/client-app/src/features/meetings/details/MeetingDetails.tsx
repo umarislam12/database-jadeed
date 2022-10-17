@@ -13,10 +13,11 @@ import MeetingDetailedSidebar from './MeetingDetailedSidebar';
 export default observer(function MeetingDetails(){
   const{meetingStore }=useStore();
   const {id}=useParams<{id:string}>();
-  const{selectedMeeting:meeting,loadMeeting, loadingInitial}=meetingStore;
+  const{selectedMeeting:meeting,loadMeeting, loadingInitial,clearSelectedMeeting}=meetingStore;
   useEffect(() => {
     if(id) loadMeeting(id);
-  }, [id,loadMeeting])
+    return ()=>clearSelectedMeeting();
+  }, [id,loadMeeting, clearSelectedMeeting])
   
   if(loadingInitial || !meeting)return <LoadingComponent />
     return(
