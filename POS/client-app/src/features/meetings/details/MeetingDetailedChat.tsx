@@ -1,11 +1,11 @@
-import { Form, Formik } from "formik";
+import { Field, FieldProps, Form, Formik, validateYupSchema } from "formik";
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Segment, Header, Comment, Button } from "semantic-ui-react";
+import { Segment, Header, Comment, Button, Loader } from "semantic-ui-react";
 import MyTextArea from "../../../app/common/form/MyTextArea";
 import { useStore } from "../../../app/stores/store";
-
+import * as Yup from 'yup';
 interface Props {
   meetingId: string;
 }
@@ -51,20 +51,20 @@ export default observer(function MeetingDetailedChat({ meetingId }: Props) {
               commentStore.addComment(values).then(() => resetForm())
             }
             initialValues={{ body: "" }}
+            validationSchema={Yup.object({
+              body: Yup.string().required()
+            })}
           >
-            {({ isSubmitting, isValid }) => (
+            {({ isSubmitting, isValid, handleSubmit }) => (
               <Form className="ui form">
-                <MyTextArea placeholder="add comment" name='body' rows={2} />
-                <Button
-                  loading={isSubmitting}
-                  disabled={isSubmitting || !isValid}
-                  content="Add Reply"
-                  labelPosition="left"
-                  icon="edit"
-                  primary
-                  type="submit"
-                  floated="right"
-                />
+              <Field name='body'>
+                {(props: FieldProps)=>(
+                  <div style={{position:'relative'}}>
+                    <Loader active={isSubmitting} />
+                    <textarea placeholder="Enter your comment(enter to submit, shift+enter for new line)"/>
+                  </div>
+                )}
+              </Field>
               </Form>
             )}
           </Formik>
