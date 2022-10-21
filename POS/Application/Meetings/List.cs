@@ -1,17 +1,12 @@
 ﻿
 using Application.Core;
+using Application.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Meetings
 {
@@ -23,11 +18,14 @@ namespace Application.Meetings
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly IUserAccessor _userAccessor;
 
-            public Handler(DataContext context, ILogger<List> logger, IMapper mapper)
+            public Handler(DataContext context, ILogger<List> logger, IMapper mapper, IUserAccessor
+                userAccessor)
             {
                 _context = context;
                 _mapper = mapper;
+                _userAccessor = userAccessor;
             }
 
             public async Task<Result<List<MeetingDto>>> Handle(Query request, CancellationToken cancellationToken)
@@ -49,7 +47,7 @@ namespace Application.Meetings
                 var meetings = await _context.Meetings
                     //.Include(a=>a.Attendees)
                     //.ThenInclude(u=>u.AppUser)
-                    .ProjectTo<MeetingDto>(_mapper.ConfigurationProvider)
+                    .ProjectTo<MeetingDto>(_mapper.ConfigurationProvider, new { currentUsername = _userAccessor.GetUsername()})
                     .ToListAsync(cancellationToken);
               //  var meetingsToReturn=_mapper.Map<List<MeetingDto>>(meetings);
                 return Result<List<MeetingDto>>.Success(meetings);
