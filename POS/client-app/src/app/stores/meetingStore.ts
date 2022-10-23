@@ -207,4 +207,14 @@ export default class MeetingStore {
     clearSelectedMeeting=()=>{
         this.selectedMeeting=undefined;
     }
+    updateAttendeeFollowing=(username: string)=>{
+        this.meetingRegistry.forEach(meeting=>{
+            meeting.attendees.forEach(attendee=>{
+                if(attendee.username=== username){
+                    attendee.following ? attendee.followersCount-- : attendee.followersCount++;
+                    attendee.following = !attendee.following;
+                }
+            })
+        })
+    }
 }

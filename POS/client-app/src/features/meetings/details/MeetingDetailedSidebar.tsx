@@ -45,7 +45,9 @@ export default function MeetingDetailedSidebar({meeting:{ attendees, host} }: Pr
                     {attendee.username} 
                   </Link>
                 </Item.Header>
+                {attendee.following &&
                 <Item.Extra style={{ color: "orange" }}>Following</Item.Extra>
+              }
               </Item.Content>
             </Item>
           ))}

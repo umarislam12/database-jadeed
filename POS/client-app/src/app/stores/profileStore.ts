@@ -11,7 +11,8 @@ export default class ProfileStore {
   loadingProfile = false;
   uploading = false;
   loading = false;
-  updating=false;
+  updating = false;
+  followings: Profile[] = [];
   /**
    *
    */
@@ -79,25 +80,60 @@ export default class ProfileStore {
       });
     }
   };
-  deletePhoto=async (photo:Photo)=>{
-    this.loading=true;
+  deletePhoto = async (photo: Photo) => {
+    this.loading = true;
     try {
-       await agent.Profiles.deletePhoto(photo.id) 
-       runInAction(()=>{
-        if(this.profile){
-            this.profile.photos=this.profile.photos!.filter(p=>p.id !== photo.id);
-            this.loading=false;
+      await agent.Profiles.deletePhoto(photo.id);
+      runInAction(() => {
+        if (this.profile) {
+          this.profile.photos = this.profile.photos!.filter(
+            (p) => p.id !== photo.id
+          );
+          this.loading = false;
         }
-       })
+      });
     } catch (error) {
-        runInAction(()=>this.loading=false);
-        console.log(error)
-    }
-  }
-  changeAboutSection = async(values: AboutFormValues) => {
-    
-    if (this.profile) {
-      await agent.Profiles.updateAbout(values)
+      runInAction(() => (this.loading = false));
+      console.log(error);
     }
   };
+  changeAboutSection = async (values: AboutFormValues) => {
+    if (this.profile) {
+      await agent.Profiles.updateAbout(values);
+    }
+  };
+  //we get the status of what we are about to do in the following parameter
+  updateFollowing = async (username: string, following: boolean) => {
+    this.loading = true;
+    try {
+      await agent.Profiles.updateFollowing(username);
+      store.meetingStore.updateAttendeeFollowing(username);
+      runInAction(() => {
+        if (
+          this.profile &&
+          this.profile.username !== store.userStore.user!.username
+        ) {
+          following
+            ? this.profile.followersCount++
+            : this.profile.followersCount--;
+          this.profile.following = !this.profile.following;
+        }
+        this.followings.forEach((profile) => {
+          if (profile.username === username) {
+            profile.following
+              ? profile.followersCount--
+              : profile.followersCount++;
+            profile.following = !profile.following;
+          }
+        });
+        this.loading = false;
+      });
+    } catch (error) {
+      console.log(error);
+      runInAction(() => (this.loading = false));
+    }
+  };
+  loadFollowings= async (predicate: string)=>{
+    
+  }
 }
