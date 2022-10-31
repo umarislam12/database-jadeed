@@ -61,14 +61,8 @@ meetingDate: Yup.string().required('meeting date is required'),
           <Form className='ui form'onSubmit={handleSubmit} autoComplete="off">
             <MyTextInput name='agenda' placeholder="agenda" />
           
-           
-            
-       
-
-        <MyDateInput
-              
-             
-              placeholderText="meetingDate"
+            <MyDateInput
+               placeholderText="meetingDate"
               name="meetingDate"
                  showTimeSelect  
                  timeCaption="time"

@@ -13,8 +13,10 @@ namespace Application.Meetings
     public class List
     {
         //List.Query
-        public class Query : IRequest<Result<List<MeetingDto>>> { }
-        public class Handler : IRequestHandler<Query, Result<List<MeetingDto>>>
+        public class Query : IRequest<Result<PagedList<MeetingDto>>> {
+            public MeetingParams Params { get; set; }
+        }
+        public class Handler : IRequestHandler<Query, Result<PagedList<MeetingDto>>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -28,7 +30,7 @@ namespace Application.Meetings
                 _userAccessor = userAccessor;
             }
 
-            public async Task<Result<List<MeetingDto>>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<PagedList<MeetingDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 ///*  try
                 //  {
@@ -44,13 +46,28 @@ namespace Application.Meetings
                 //      _logger.LogInformation("Task was cancelled");
 
                 //  }*/
-                var meetings = await _context.Meetings
+                var query =  _context.Meetings
                     //.Include(a=>a.Attendees)
                     //.ThenInclude(u=>u.AppUser)
-                    .ProjectTo<MeetingDto>(_mapper.ConfigurationProvider, new { currentUsername = _userAccessor.GetUsername()})
-                    .ToListAsync(cancellationToken);
+
+
+                   .Where(d => d.MeetingDate >= request.Params.StartDate)
+                    .OrderBy(d => d.MeetingDate)
+                    .ProjectTo<MeetingDto>(_mapper.ConfigurationProvider, new { currentUsername = _userAccessor.GetUsername() })
+                    .AsQueryable();
+                if(request.Params.IsGoing && !request.Params.IsHost)
+                {
+                    //filters are only clickable by curent logged user
+                    query = query.Where(x=>x.Attendees.Any(a =>a.Username  == _userAccessor.GetUsername()));
+                }
+                if(request.Params.IsHost && !request.Params.IsGoing)
+                {
+                    query=query.Where(x=>x.HostUsername == _userAccessor.GetUsername());
+                }
               //  var meetingsToReturn=_mapper.Map<List<MeetingDto>>(meetings);
-                return Result<List<MeetingDto>>.Success(meetings);
+                return Result<PagedList<MeetingDto>>.Success(
+                    await PagedList<MeetingDto>.CreateAsync(query, request.Params.PageNumber, request.Params.PageSize)
+                    );
             }
         }
     }

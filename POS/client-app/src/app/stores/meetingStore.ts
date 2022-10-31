@@ -1,8 +1,10 @@
 
 import { format } from "date-fns";
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable, reaction, runInAction } from "mobx";
+
 import agent from "../api/agent";
 import { Meeting, MeetingFormValues } from "../models/meeting";
+import { Pagination, PagingParams } from "../models/pagination";
 import { Profile } from "../models/profile";
 import { store } from "./store";
 export default class MeetingStore {
@@ -12,8 +14,84 @@ export default class MeetingStore {
     editMode = false;
     loading = false;
     selectedMeeting: Meeting | undefined = undefined;
+    
+    pagination:Pagination | null= null;
+    pagingParams= new PagingParams();
+    predicate= new Map().set('all', true)
+    
     constructor() {
-        makeAutoObservable(this)
+        makeAutoObservable(this);
+        reaction(()=>this.predicate.keys(),
+        ()=>{
+            this.pagingParams= new PagingParams();
+            this.meetingRegistry.clear();
+            this.loadMeetings();
+        }
+    )
+}
+    setPagingParams=(pagingParams: PagingParams)=>{
+        this.pagingParams=pagingParams;
+    }
+    setPredicate=(predicate:string, value : string | Date)=>{
+       const resetPredicate=()=>{
+            this.predicate.forEach((value,key)=>{
+                if(key !== 'startDate')this.predicate.delete(key);
+
+            })
+        }
+        switch(predicate){
+                    case 'all':
+                        resetPredicate()
+                        this.predicate.set('all', true);
+                        break;
+                    case 'isGoing':
+                        resetPredicate();
+                        this.predicate.set('isGoing', true);
+                        break;  
+                    case 'isHost':
+                        resetPredicate();
+                        this.predicate.set('isHost', true);
+                        break;
+                     case 'startDate':
+                            this.predicate.delete('startDate');
+                            this.predicate.set('startDate', value);
+        }
+    }
+    //when its value changes in meetingsdashboard it automatically gets calculated and passed to loadmeetings
+    //computed property
+    get axiosParams(){
+        const params= new URLSearchParams();
+        params.append('pageNumber', this.pagingParams.pageNumber.toString());
+        params.append('pageSize', this.pagingParams.pageSize.toString());
+        this.predicate.forEach((value,key)=>{
+            if(key === 'startDate'){
+                params.append(key,(value as Date).toISOString())
+            }else{
+                params.append(key, value)
+            }
+        })
+        return params;
+
+    }
+    loadMeetings = async () => {
+        this.setloadingInitial(true);
+        try {
+            const result = await agent.meetings.lists(this.axiosParams)
+            console.log(result.data);
+            result.data.forEach(meeting => {
+                this.setMeeting(meeting);
+                // this.products.push(product)
+            });
+            this.setPagination(result.pagination);
+            this.setloadingInitial(false);
+        } catch (error) {
+            console.log(error);
+            this.setloadingInitial(false);
+
+        }
+    }
+    setPagination=(pagination: Pagination)=>{
+        this.pagination=pagination
     }
     get MeetingsByDate() {
         return Array.from(this.meetingRegistry.values()).sort((a, b) =>
@@ -30,22 +108,7 @@ export default class MeetingStore {
             }, {} as { [key: string]: Meeting[] })
         )
     }
-    loadMeetings = async () => {
-        this.setloadingInitial(true);
-        try {
-            const meetings = await agent.meetings.lists()
-            console.log(meetings);
-            meetings.forEach(meeting => {
-                this.setMeeting(meeting);
-                // this.products.push(product)
-            });
-            this.setloadingInitial(false);
-        } catch (error) {
-            console.log(error);
-            this.setloadingInitial(false);
-
-        }
-    }
+   
     loadMeeting = async (id: string) => {
         let meeting = this.getMeeting(id)
         if (meeting) {

@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 
 import { history } from "../..";
 import { Meeting, MeetingFormValues } from "../models/meeting";
+import { PaginatedResult } from "../models/pagination";
 
 import { Product, ProductFormValues } from "../models/product";
 import { Photo, Profile } from "../models/profile";
@@ -22,53 +23,60 @@ axios.interceptors.request.use(config=>{
   if(token) config.headers!.Authorization=`Bearer ${token}`
   return config;
 })
-// axios.interceptors.response.use(
-//   async (response) => {
-//     // try {
-//     await sleep(1000);
-//     return response;
-//     // } catch (error) {
-//     // console.log(error);
-//     // return await Promise.reject(error);
-//     // }
-//   },
-//   (error: AxiosError) => {
-//     const { data, status, config } = error.response!;
-//     console.log(data);
-//     switch (status) {
-//       case 400:
-//         if (typeof data === "string") {
-//           toast.error(data);
-//         }
-//         if (config.method === "get" && data.errors.hasOwnProperty("id")) {
-//           history.push("/not-found");
-//         }
-//         if (data.errors) {
-//           const modalStateErrors = [];
-//           for (const key in data.errors) {
-//             if (data.errors[key]) {
-//               modalStateErrors.push(data.errors[key]);
-//             }
-//           }
-//           throw modalStateErrors.flat();
-//         }
-//         // toast.error('bad request');
-//         break;
-//       case 401:
-//         toast.error("unauthorised");
-//         break;
-//       case 404:
-//         history.push("/not-found");
-//         toast.error("not found");
-//         break;
-//       case 500:
-//         store.commonStore.setServerError(data);
-//         history.push("/server-error");
-//         break;
-//     }
-//     return Promise.reject(error);
-//   }
-// );
+axios.interceptors.response.use(
+  async (response) => {
+    // try {
+    await sleep(1000);
+    const pagiation=response.headers['pagination'];
+    if(pagiation){
+      response.data= new PaginatedResult(response.data, JSON.parse(pagiation));
+     
+      return response as AxiosResponse<PaginatedResult<any>>
+    }
+    return response;
+    // } catch (error) {
+    // console.log(error);
+    // return await Promise.reject(error);
+    // }
+  },
+  (error: AxiosError) => {
+    const { data, status, config } = error.response!;
+    console.log(error.response);
+    console.log(data);
+    switch (status) {
+      case 400:
+        if (typeof data === "string") {
+          toast.error(data);
+        }
+        if (config.method === "get" && (data as any).errors.hasOwnProperty("id")) {
+          history.push("/not-found");
+        }
+        if ((data as any).errors) {
+          const modalStateErrors = [];
+          for (const key in (data as any).errors) {
+            if ((data as any).errors[key]) {
+              modalStateErrors.push((data as any).errors[key]);
+            }
+          }
+          throw modalStateErrors.flat();
+        }
+        // toast.error('bad request');
+        break;
+      case 401:
+        toast.error("unauthorised");
+        break;
+      case 404:
+        history.push("/not-found");
+        toast.error("not found");
+        break;
+      case 500:
+        store.commonStore.setServerError(data as any);
+        history.push("/server-error");
+        break;
+    }
+    return Promise.reject(error);
+  }
+);
 const requests = {
   get: <T>(url: string) => axios.get<T>(url).then(responseBody),
   put: <T>(url: string, body: {}) => axios.put<T>(url).then(responseBody),
@@ -85,7 +93,7 @@ const products = {
   delete: (id: string) => axios.delete<void>(`/products/${id}`),
 };
 const meetings = {
-  lists: () => requests.get<Meeting[]>("/meetings"),
+  lists: (params:URLSearchParams) => axios.get<PaginatedResult<Meeting[]>>("/meetings",{params}).then(responseBody),
   deatails: (id: string) => requests.get<Meeting>(`/meetings/${id}`),
   create: (meeting: MeetingFormValues) => requests.post<void>("/meetings", meeting),
   update: (meeting: MeetingFormValues) =>

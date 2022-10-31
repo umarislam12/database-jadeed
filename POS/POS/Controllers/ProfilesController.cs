@@ -11,12 +11,12 @@ namespace POS.Controllers
         [HttpGet("{username}")]
         public async Task<IActionResult> GetProfile (string username)
         { 
-            return resultHandler(await Mediator.Send(new Details.Query { Username = username }));
+            return ResultHandler(await Mediator.Send(new Details.Query { Username = username }));
         }
         [HttpPut]
         public async Task<IActionResult> UpdateProfile(Edit.Command command)
         {
-            return resultHandler(await Mediator.Send(command));
+            return ResultHandler(await Mediator.Send(command));
         }
     }
 }
