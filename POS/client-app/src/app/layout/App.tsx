@@ -20,6 +20,7 @@ import MeetingDashboard from "../../features/meetings/dashboard/MeetingDashboard
 import MeetingDetails from "../../features/meetings/details/MeetingDetails";
 import ProfilePage from "../../features/profile/ProfilePage";
 import MeetingForm from "../../features/products/form/MeetingForm";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -51,27 +52,27 @@ function App() {
               {/* <h1>{productStore.}</h1> */}
               {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
               <Switch>
-                <Route path="/products" exact component={ProductDashboard} />
-                <Route path="/meetings" exact component={MeetingDashboard} />
+                <PrivateRoute path="/products" exact component={ProductDashboard} />
+                <PrivateRoute path="/meetings" exact component={MeetingDashboard} />
                
-                <Route path="/meetings/:id" component={MeetingDetails} />
-                <Route path="/products/:id" component={ProductDetails} />
-                <Route
+                <PrivateRoute path="/meetings/:id" component={MeetingDetails} />
+                <PrivateRoute path="/products/:id" component={ProductDetails} />
+                <PrivateRoute
                 exact
                   key={location.key}
                   path={["/createProduct", "/manage/:id"]}
                   component={ProductForm}
                 />
-                 <Route
+                 <PrivateRoute
                  exact
                   key={location.key}
                   path={["/createMeeting", "/manageMeeting/:id"]}
                   component={MeetingForm}
                 />
-                <Route path="/profiles/:username" component={ProfilePage} />
-                <Route path="/errors" component={TestErrors} />
+                <PrivateRoute path="/profiles/:username" component={ProfilePage} />
+                <PrivateRoute path="/errors" component={TestErrors} />
                 <Route path="/server-error" component={ServerError} />
-                <Route path="/login" component={LoginForm} />
+               
                 
 
 

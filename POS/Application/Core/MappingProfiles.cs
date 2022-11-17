@@ -1,7 +1,9 @@
 ﻿using Application.Comments;
 using Application.Meetings;
+
 using AutoMapper;
 using Domain;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Application.Core
 {
-    public class MappingProfiles:Profile
+    public class MappingProfiles : AutoMapper.Profile
     {
         public MappingProfiles()
         {
@@ -42,6 +44,15 @@ namespace Application.Core
                 .ForMember(d => d.DisplayName, o => o.MapFrom(n => n.Author.DisplayName))
                 .ForMember(d => d.Image, o => o.MapFrom(i => i.Author.Photos.FirstOrDefault(x => x.IsMain).Url));
 
+            CreateMap<UserMeeting, Profiles.UserMeetingDto>()
+                .ForMember(d=>d.Id, o=>o.MapFrom(s=>s.Meeting.Id))
+                .ForMember(d => d.Agenda, o => o.MapFrom(u => u.Meeting.Agenda))
+                .ForMember(d => d.MeetingDate, o => o.MapFrom(u => u.Meeting.MeetingDate))
+                .ForMember(d => d.HostUsername, o => o.MapFrom(u => u.Meeting.Attendees.FirstOrDefault(x=>x.IsCovener).AppUser.UserName));
+            //CreateMap<Meeting, Profiles.UserMeetingDto>()
+            //     .ForMember(d => d.Agenda, o => o.MapFrom(u => u.Agenda))
+            //    .ForMember(d => d.MeetingDate, o => o.MapFrom(u => u.MeetingDate))
+            //    .ForMember(d => d.HostUsername, o => o.MapFrom(u => u.Attendees.FirstOrDefault(x=>x.IsCovener).AppUser.UserName));
         }
 
         

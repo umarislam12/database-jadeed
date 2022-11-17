@@ -118,6 +118,7 @@ export default class MeetingStore {
             this.loadingInitial = true;
             try {
                 meeting = await agent.meetings.deatails(id);
+                console.log(meeting);
                 this.setMeeting(meeting);
                 runInAction(() => this.selectedMeeting = meeting)
 

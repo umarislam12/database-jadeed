@@ -18,5 +18,10 @@ namespace POS.Controllers
         {
             return ResultHandler(await Mediator.Send(command));
         }
+        [HttpGet("{username}/meetings")]
+        public async Task<IActionResult> GetProfileMeetings( string username, string predicate)
+        {
+            return ResultHandler(await Mediator.Send(new ListMeetings.Query {Username=username, Predicate =predicate }));
+        }
     }
 }

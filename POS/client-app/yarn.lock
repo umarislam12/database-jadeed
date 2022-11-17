@@ -9819,6 +9819,11 @@
   optionalDependencies:
     "fsevents" "1.2.4"
 
+"react-scroll-to-top@^3.0.0":
+  "integrity" "sha512-I/k45Ujai097du59tHBbzGxN7Lyc6K8Uc3IChq6HMXaBfB8N/rrfm055T5Yv0DWfVpf6pOFaBmhD3LOfH5unGw=="
+  "resolved" "https://registry.npmjs.org/react-scroll-to-top/-/react-scroll-to-top-3.0.0.tgz"
+  "version" "3.0.0"
+
 "react-toastify@*", "react-toastify@^9.0.0-rc-2":
   "integrity" "sha512-ErWO+aINQ05zkZIqUxwGQjjhdW6649ANYgFiHY4ecZ8n8eYEhZTSKP0rp1lKEkDT9i4ZhMGrwnOWPk4wfkJsOQ=="
   "resolved" "https://registry.npmjs.org/react-toastify/-/react-toastify-9.0.0-rc-2.tgz"
@@ -9826,7 +9831,7 @@
   dependencies:
     "clsx" "^1.1.1"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.9 || ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.5.x || ^16.x || ^17.x || ^18.x", "react@^16.0.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17 || ^18", "react@^17.0.2", "react@>= 16.8 || 18.0.0", "react@>=15", "react@>=16", "react@>=16.0.0", "react@>=16.8.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.9 || ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.5.x || ^16.x || ^17.x || ^18.x", "react@^16.0.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x || ^18", "react@^16.9.0 || ^17 || ^18", "react@^17.0.2", "react@>= 16.8 || 18.0.0", "react@>=15", "react@>=16", "react@>=16.0.0", "react@>=16.8.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

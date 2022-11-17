@@ -1,7 +1,8 @@
 import { makeAutoObservable, reaction, runInAction } from "mobx";
 import React, { Component } from "react";
 import agent from "../api/agent";
-import { Photo, Profile } from "../models/profile";
+import { Meeting } from "../models/meeting";
+import { Photo, Profile, UserMeeting } from "../models/profile";
 import { AboutFormValues } from "../models/user";
 import { store } from "./store";
 import UserStore from "./userStore";
@@ -15,6 +16,9 @@ export default class ProfileStore {
   followings: Profile[] = [];
   loadingFollowings = false;
   activeTab = 0;
+  userMeetings: UserMeeting[]=[];
+  loadingMeetings:boolean=false; 
+  //predicate= new Map().set('past', true)
   /**
    *
    */
@@ -32,7 +36,54 @@ export default class ProfileStore {
         }
       }
     );
+    // reaction(
+    //   ()=>this.predicate.keys(),
+    //   ()=>{
+         
+    //       this.userMeetings=[];
+    //       this.loadProfileMeetings(this.profile!.username, this.predicate.get('past'));
+    //   }
+
+    // )
   }
+//   setPredicate=(predicate:string, value : string | Date)=>{
+//     const resetPredicate=()=>{
+//          this.predicate.forEach((value,key)=>{
+//              if(key !== 'startDate')this.predicate.delete(key);
+
+//          })
+//      }
+//      switch(predicate){
+//                  case 'past':
+//                      resetPredicate()
+//                      this.predicate.set('past', true);
+//                      break;
+//                  case 'future':
+//                      resetPredicate();
+//                      this.predicate.set('future', true);
+//                      break;  
+//                  case 'isHost':
+//                      resetPredicate();
+//                      this.predicate.set('isHost', true);
+//                      break;
+                 
+//      }
+//  }
+ //when its value changes in meetingsdashboard it automatically gets calculated and passed to loadmeetings
+ //computed property
+//  get axiosParams(){
+//      const params= new URLSearchParams();
+    
+//      this.predicate.forEach((value,key)=>{
+//          if(key === 'startDate'){
+//              params.append(key,(value as Date).toISOString())
+//          }else{
+//              params.append(key, value)
+//          }
+//      })
+//      return params;
+
+//  }
   setActiveTab=(activeTab: any)=>{
     this.activeTab=activeTab
   }
@@ -161,6 +212,7 @@ export default class ProfileStore {
         this.profile!.username,
         predicate
       );
+     
       runInAction(() => {
         this.followings = followings;
         this.loadingFollowings = false;
@@ -170,4 +222,37 @@ export default class ProfileStore {
       runInAction(() => (this.loadingFollowings = false));
     }
   };
+  private setUserMeeting=(meeting:UserMeeting)=>{
+    // console.log(meeting);
+this.userMeetings.push(meeting);
+
+  }
+  loadProfileMeetings=async(username: string, predicate?: string)=>{
+    console.log(predicate);
+    this.loadingMeetings=true;
+    try {
+      const userMeetings=await agent.Profiles.listMeetings(username,predicate!);
+      console.log(userMeetings);
+    // userMeetings.forEach((meeting:any)=>{
+    //   this.setUserMeeting(meeting)
+    // })
+      runInAction(()=>{
+        this.userMeetings=userMeetings;
+        this.loadingMeetings=false;
+      })
+      console.log(this.userMeetings);
+      return Meeting;
+    } catch (error) {
+      console.log(error);
+      runInAction(()=>{
+        this.loadingMeetings=false;
+      })
+  
+    }
+   
+  }
+ 
+  
 }
+
+

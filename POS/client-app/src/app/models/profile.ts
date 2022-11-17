@@ -22,3 +22,8 @@ id: string;
 url:string;
 isMain: boolean
 }
+export interface UserMeeting{
+    id: string;
+    agenda: string;
+    meetingDate:  Date;
+}

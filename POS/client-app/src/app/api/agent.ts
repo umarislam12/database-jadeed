@@ -6,7 +6,7 @@ import { Meeting, MeetingFormValues } from "../models/meeting";
 import { PaginatedResult } from "../models/pagination";
 
 import { Product, ProductFormValues } from "../models/product";
-import { Photo, Profile } from "../models/profile";
+import { Photo, Profile, UserMeeting } from "../models/profile";
 
 import { AboutFormValues, User, UserFormValues } from "../models/user";
 import { store } from "../stores/store";
@@ -121,7 +121,8 @@ const Profiles={
   deletePhoto:(id:string)=>requests.del(`/photos/${id}`),
   updateAbout:(userAbout: AboutFormValues)=>axios.put<void>(`/profiles`,userAbout),
   updateFollowing:(username: string)=>requests.post(`/follow/${username}`, {}),
-  listFollowings:(username:string, predicate: string)=>requests.get<Profile[]>(`/follow/${username}?predicate=${predicate}`)
+  listFollowings:(username:string, predicate: string)=>requests.get<Profile[]>(`/follow/${username}?predicate=${predicate}`),
+  listMeetings:(username:string, predicate:string)=>requests.get<UserMeeting[]>(`/profiles/${username}/meetings?predicate=${predicate}`)
 }
 const agent = {
   products,
