@@ -150,3 +150,14 @@ C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Infrastru
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\CloudinaryDotNet.dll
 C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\POS.staticwebassets.runtime.json
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Npgsql.dll
+C:\Users\f14b1\Desktop\database-jadeed-master\POS\POS\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

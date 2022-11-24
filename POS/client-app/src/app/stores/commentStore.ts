@@ -13,7 +13,7 @@ export default class CommentStore {
     createHubConnection=(meetingId: string)=>{
         if(store.meetingStore.selectedMeeting){
             this.hubConnection= new HubConnectionBuilder()
-            .withUrl('http://localhost:5000/chat?meetingId='+meetingId, {
+            .withUrl(process.env.REACT_APP_CHAT_URL + '?meetingId='+meetingId, {
                 accessTokenFactory:()=>store.userStore.user!.token!
             })
             .withAutomaticReconnect()
