@@ -52,10 +52,10 @@ namespace Application.Profiles
                 query = request.Predicate switch
                 {
                     "past" =>
-                        query.Where(x => x.MeetingDate <= DateTime.Now),
+                        query.Where(x => x.MeetingDate <= DateTime.UtcNow),
                     "hosting" => query.Where(x => x.HostUsername == request.Username),
 
-                _ => query.Where(x => x.MeetingDate >= DateTime.Now),
+                _ => query.Where(x => x.MeetingDate >= DateTime.UtcNow),
                 
 
 

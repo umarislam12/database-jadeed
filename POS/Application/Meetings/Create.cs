@@ -44,7 +44,7 @@ namespace Application.Meetings
                 {
                     AppUser = user,
                     Meeting = request.Meeting,
-                    MeetingDate = DateTime.Now,
+                    MeetingDate = DateTime.UtcNow,
                     IsCovener=true
                 };
                 request.Meeting.Attendees.Add(attendee);

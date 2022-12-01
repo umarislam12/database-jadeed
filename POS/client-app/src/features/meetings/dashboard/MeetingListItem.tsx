@@ -32,7 +32,7 @@ export default observer(function MeetingListItem({ meeting }: Props) {
               style={{ marginBottom: 3 }}
               size="tiny"
               circular
-              alt="image goes here"
+              
               src={meeting.host ? meeting.host.image : "/assets/user.png"}
             />
             <Item.Content>

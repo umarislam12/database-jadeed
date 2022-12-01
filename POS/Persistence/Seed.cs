@@ -38,7 +38,7 @@ namespace Persistence
                     new Meeting
                     {
                        Agenda="should we buy more products?",
-                       MeetingDate=DateTime.Now.AddMonths(-2),
+                       MeetingDate=DateTime.UtcNow.AddMonths(-2),
                      
                        Attendees= new List<UserMeeting>
                        {
@@ -52,7 +52,7 @@ namespace Persistence
                     new Meeting
                     {
                        Agenda="should we go to china?",
-                       MeetingDate=DateTime.Now.AddMonths(-2),
+                       MeetingDate=DateTime.UtcNow.AddMonths(-2),
                        
                        Attendees= new List<UserMeeting>
                        {
@@ -79,7 +79,7 @@ namespace Persistence
                 {
                     ProductName = "Product 1",
                     ProductNumber = "12*22*5",
-                    Created = DateTime.Now.AddMonths(-2),
+                    Created = DateTime.UtcNow.AddMonths(-2),
                     Description = "Activity 2 months ago",
                     Category = "drinks",
                     QtyStock = 10,
@@ -89,14 +89,14 @@ namespace Persistence
                    Brand="NOK",
                    Vandor="Xionen",
                    Packed=false,
-                   Modified=DateTime.Now.AddMonths(-2),
+                   Modified=DateTime.UtcNow.AddMonths(-2),
 
                 },
                 new Product
                 {
                      ProductName = "Product 2",
                      ProductNumber = "12*22*5",
-                    Created = DateTime.Now.AddMonths(-2),
+                    Created = DateTime.UtcNow.AddMonths(-2),
                     Description = "Activity 2 months ago",
                     Category = "drinks",
                     QtyStock = 10,
@@ -106,14 +106,14 @@ namespace Persistence
                    Brand="NOK",
                    Vandor="Xionen",
                    Packed=false,
-                   Modified=DateTime.Now.AddMonths(-2),
+                   Modified=DateTime.UtcNow.AddMonths(-2),
 
                 },
                 new Product
                 {
                    ProductName = "Product 3",
                    ProductNumber = "12*22*5",
-                    Created = DateTime.Now.AddMonths(-2),
+                    Created = DateTime.UtcNow.AddMonths(-2),
                     Description = "product 3",
                     Category = "drinks",
                     QtyStock = 10,
@@ -123,7 +123,7 @@ namespace Persistence
                    Brand="NOK",
                    Vandor="Xionen",
                    Packed=false,
-                   Modified=DateTime.Now.AddMonths(-2),
+                   Modified=DateTime.UtcNow.AddMonths(-2),
 
                 },
               
