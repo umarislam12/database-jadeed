@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj": {}
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj": {
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\f14b1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj": {
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\f14b1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -137,21 +137,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\f14b1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -165,8 +165,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj"
               }
             }
           }
@@ -202,21 +202,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\f14b1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -230,8 +230,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Domain\\Domain.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
               }
             }
           }
@@ -248,7 +248,7 @@
           "dependencies": {
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.4, )"
             }
           },
           "imports": [
@@ -267,21 +267,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj": {
+    "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj",
+        "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\POS.csproj",
         "projectName": "POS",
-        "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\POS.csproj",
-        "packagesPath": "C:\\Users\\f14b1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\POS\\obj\\",
+        "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\POS.csproj",
+        "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\f14b1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -295,11 +295,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Application\\Application.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj"
               },
-              "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\f14b1\\Desktop\\database-jadeed-master\\POS\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -327,6 +327,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.22.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -356,7 +360,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

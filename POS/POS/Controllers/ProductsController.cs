@@ -18,7 +18,7 @@ namespace POS.Controllers
             return ResultHandler(await Mediator.Send(new List.Query()));
         }
        
-        [HttpGet("{id}")] //activities/id
+        [HttpGet("{id}")] //products/id
         public async Task<IActionResult> GetProduct(Guid id) {
 
             return ResultHandler(await Mediator.Send(new Details.Query { Id = id }));
