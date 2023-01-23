@@ -14,7 +14,7 @@ interface Props{
 export default observer(function ProfileContent( {profile}:Props) {
   const{profileStore}=useStore();
     const panes=[
-        {menuItem:'About', render:()=><ProfileAbout profile={profile}/>},
+        {menuItem:'About', render:()=><ProfileAbout />},
         {menuItem:'Photos', render:()=><ProfilePhotos profile={profile}/>},
         {menuItem:'Events', render:()=><ProfileMeetings />},
         {menuItem:'Followers', render:()=><ProfileFollowings />},
