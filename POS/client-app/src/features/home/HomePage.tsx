@@ -6,7 +6,41 @@ import { useStore } from "../../app/stores/store";
 import LoginForm from "../users/LoginForm";
 import RegisterForm from "../users/RegisterForm";
 // import UserStore from "../../app/stores/userStore";
+const files = {
+  children: [
+    {
+      name: "node_modules",
+      children: [
+        {
+        name: "figures",
+        
+        }
+      ]
+    },
+    {
 
+      name:"public"
+    },
+    {
+      name:"package.json"
+    }
+],
+
+}
+type TEntry={
+  name:string;
+  children?:TEntry[];
+}
+function Dumb({name, children}:TEntry) {
+  return(
+    <div> 
+   
+    {name}
+    {}
+ 
+  </div>
+  )
+}
 export default observer(function HomePage() {
   const { userStore, modalStore } = useStore();
   return (
@@ -21,6 +55,7 @@ export default observer(function HomePage() {
           />
           POS
         </Header>
+        {files.children.map((child)=>{<Dumb {...child}/>})}
         {userStore.isLoggedIn ? (
           <>
             <Header as="h2" inverted content="welcome to POS" />

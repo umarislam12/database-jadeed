@@ -11,6 +11,7 @@ namespace Domain
         public Guid Id { get; set; }
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }
+	public DateTime? CustomerSince { get; set; }
         public ICollection<Order> Orders { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace Domain
         public DateTime OrderDate { get; set; }
         public int OrderAmount { get; set; }
         public string Comments { get; set; }
-        public ICollection<OrderDetail> ProductsDetails { get; set; }
+	public Guid? CustomerId { get; set; }
+ 	public virtual Customer? Customer { get; set; }
+        public virtual ICollection<OrderDetail> ProductsDetails { get; set; }
     }
 }

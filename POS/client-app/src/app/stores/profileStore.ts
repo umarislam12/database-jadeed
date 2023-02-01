@@ -171,7 +171,7 @@ export default class ProfileStore {
       await agent.Profiles.updateProfile(profile);
       runInAction(() => {
         if (profile.displayName && profile.displayName !==
-          store.userStore.user?.displayName) {
+          store.userStore.user!.displayName) {
           store.userStore.setDisplayName(profile.displayName);
         }
         this.profile = { ...this.profile, ...profile as Profile };

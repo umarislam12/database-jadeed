@@ -201,3 +201,8 @@ C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\refint\POS.dll
 C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\POS.pdb
 C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\POS.genruntimeconfig.cache
 C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\ref\POS.dll
+C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\staticwebassets\msbuild.POS.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\staticwebassets\msbuild.build.POS.props
+C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.POS.props
+C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.POS.props
+C:\Users\Umar\Desktop\database-jadeed\POS\POS\obj\Debug\net6.0\staticwebassets.pack.json

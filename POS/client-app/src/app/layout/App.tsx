@@ -43,7 +43,7 @@ function App() {
       <ToastContainer position="bottom-right" hideProgressBar />
       <ModalContainer />
       <Route path="/" exact component={HomePage} />
-      <NavBar />
+      {/* <NavBar /> */}
       <Route
         path={"/(.+)"}
         render={() => (
@@ -52,6 +52,7 @@ function App() {
               {/* <h1>{productStore.}</h1> */}
               {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
               <Switch>
+              <NavBar />
                 <PrivateRoute path="/products" exact component={ProductDashboard} />
                 <PrivateRoute path="/meetings" exact component={MeetingDashboard} />
                

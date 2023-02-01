@@ -39,7 +39,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "postbuild": "move build ../POS/wwwroot",
     "test": "react-scripts test",

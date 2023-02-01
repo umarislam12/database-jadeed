@@ -4,6 +4,7 @@ import { Button } from "semantic-ui-react";
 import MyTextArea from "../../app/common/form/MyTextArea";
 import MyTextInput from "../../app/common/form/MyTextInput";
 import { useStore } from "../../app/stores/store";
+import React from 'react'
 import * as Yup from 'yup';
 interface Props {
     setEditMode: (editMode: boolean) => void;
@@ -13,8 +14,8 @@ export default observer(function ProfileEditForm({ setEditMode }: Props) {
     return (
         <Formik
             initialValues={{
-                displayName: profile?.displayName, bio:
-                    profile?.bio
+                displayName: profile!.displayName, bio:
+                    profile!.bio
             }}
             onSubmit={values => {
                 updateProfile(values).then(() => {
