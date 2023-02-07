@@ -52,20 +52,20 @@ function App() {
               {/* <h1>{productStore.}</h1> */}
               {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
               <Switch>
-              <NavBar />
+                <NavBar />
                 <PrivateRoute path="/products" exact component={ProductDashboard} />
                 <PrivateRoute path="/meetings" exact component={MeetingDashboard} />
-               
+
                 <PrivateRoute path="/meetings/:id" component={MeetingDetails} />
                 <PrivateRoute path="/products/:id" component={ProductDetails} />
                 <PrivateRoute
-                exact
+                  exact
                   key={location.key}
                   path={["/createProduct", "/manage/:id"]}
                   component={ProductForm}
                 />
-                 <PrivateRoute
-                 exact
+                <PrivateRoute
+                  exact
                   key={location.key}
                   path={["/createMeeting", "/manageMeeting/:id"]}
                   component={MeetingForm}
@@ -73,11 +73,11 @@ function App() {
                 <PrivateRoute path="/profiles/:username" component={ProfilePage} />
                 <PrivateRoute path="/errors" component={TestErrors} />
                 <Route path="/server-error" component={ServerError} />
-               
-                
 
 
-               
+
+
+
                 <Route component={NotFound} />
               </Switch>
             </Container>
