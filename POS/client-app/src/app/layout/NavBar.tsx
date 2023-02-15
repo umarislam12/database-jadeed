@@ -14,6 +14,7 @@ export default observer(function NavBar() {
                     <img src="/assets/logo.png" alt="logo" style={{marginRight:10}}/>
                     POS
                 </Menu.Item>
+                <Menu.Item as={NavLink} to='/maindashboard' name="Dashboard" />
                 <Menu.Item as={NavLink} to='/products' name="Product" />
                 <Menu.Item as={NavLink} to='/meetings' name="Meeting" />
                 <Menu.Item as={NavLink} to='/errors' name='Errors'>Errors</Menu.Item>
@@ -25,7 +26,7 @@ export default observer(function NavBar() {
                 </Menu.Item>
                 <Menu.Item position='right'> 
                 <Image src={user && user.image || '/assets/user.png'} avatar spaced='right'/></Menu.Item>
-                <Dropdown pointing='top left' text={ user! && user.username}>
+                <Dropdown  pointing='top left' text={ user! && user.username}>
                     <DropdownMenu>
                     
                     <Dropdown.Item  as={Link} to={`/profiles/${user && user.username}`} text='my profile' icon='user'/>

@@ -8,23 +8,15 @@ import { store, StoreContext } from './app/stores/store';
 import { Router } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
 import 'react-toastify/dist/ReactToastify.min.css';
-import {createBrowserHistory} from 'history';
+import { createBrowserHistory } from 'history';
 import 'react-datepicker/dist/react-datepicker.css';
 import ScrollToTop from './app/layout/ScrollToTop';
-// const files={
-//   children:[{
-//   name:"node_modules",
-//   children:[{
 
-//   }]
-// }],
-
-// }
-export const history=createBrowserHistory();
+export const history = createBrowserHistory();
 ReactDOM.render(
   <StoreContext.Provider value={store}>
     <Router history={history}>
-      <ScrollToTop/>
+      <ScrollToTop />
       <App />
     </Router>
   </StoreContext.Provider>
