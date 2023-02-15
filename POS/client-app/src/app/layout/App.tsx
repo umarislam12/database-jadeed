@@ -21,6 +21,7 @@ import MeetingDetails from "../../features/meetings/details/MeetingDetails";
 import ProfilePage from "../../features/profile/ProfilePage";
 import MeetingForm from "../../features/products/form/MeetingForm";
 import PrivateRoute from "./PrivateRoute";
+import MainDashboard from "../../features/main/MainDashboard";
 
 
 
@@ -44,6 +45,7 @@ function App() {
       <ModalContainer />
       <Route path="/" exact component={HomePage} />
       {/* <NavBar /> */}
+      
       <Route
         path={"/(.+)"}
         render={() => (
@@ -51,8 +53,9 @@ function App() {
             <Container style={{ marginTop: "7em" }}>
               {/* <h1>{productStore.}</h1> */}
               {/* <Button content="add exclamation" positive onClick={productStore.setTitle} /> */}
-              <Switch>
                 <NavBar />
+              <Switch>
+                <PrivateRoute path="/maindashboard" exact component={MainDashboard} />
                 <PrivateRoute path="/products" exact component={ProductDashboard} />
                 <PrivateRoute path="/meetings" exact component={MeetingDashboard} />
 

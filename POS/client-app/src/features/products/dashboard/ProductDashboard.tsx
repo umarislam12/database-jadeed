@@ -15,6 +15,7 @@ export default observer(function ProductDashboard() {
   const{loadProducts, productRegistry}=productStore;
     
   useEffect(() => {
+    console.log('load products running')
   if(productRegistry.size<=1)loadProducts()
   }, [productRegistry.size,loadProducts])
   //view product in productdetail from productList component

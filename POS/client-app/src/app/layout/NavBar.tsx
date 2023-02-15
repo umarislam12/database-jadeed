@@ -14,6 +14,7 @@ export default observer(function NavBar() {
                     <img src="/assets/logo.png" alt="logo" style={{marginRight:10}}/>
                     POS
                 </Menu.Item>
+                <Menu.Item as={NavLink} to='/maindashboard' name="Dashboard" />
                 <Menu.Item as={NavLink} to='/products' name="Product" />
                 <Menu.Item as={NavLink} to='/meetings' name="Meeting" />
                 <Menu.Item as={NavLink} to='/errors' name='Errors'>Errors</Menu.Item>
