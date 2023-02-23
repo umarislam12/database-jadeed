@@ -12,7 +12,7 @@ RUN dotnet restore "API.sln"
 
 COPY . .
 RUN dotnet publish -c Release -o out
-
+#build a runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .

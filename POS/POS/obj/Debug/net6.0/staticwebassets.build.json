@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VMEN/FFQmL6sRl3v7mbS/BHSdtdQdfQJ15+6zzePSts=",
+  "Hash": "r8PsnKr7FbIJZ3HZb8V13Ifp+J911JikOEB7ACQfVTc=",
   "Source": "POS",
   "BasePath": "_content/POS",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\abc.png",
+      "SourceId": "POS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "BasePath": "_content/POS",
+      "RelativePath": "assets/abc.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\abc.png"
     },
     {
       "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\culture.jpg",
@@ -272,12 +289,12 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\precache-manifest.600c369122f6d44c59e1f19621ebaace.js",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\precache-manifest.1094d6395186fe8568ad43fb279412d7.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "precache-manifest.600c369122f6d44c59e1f19621ebaace.js",
+      "RelativePath": "precache-manifest.1094d6395186fe8568ad43fb279412d7.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,7 +303,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\precache-manifest.600c369122f6d44c59e1f19621ebaace.js"
+      "OriginalItemSpec": "wwwroot\\precache-manifest.1094d6395186fe8568ad43fb279412d7.js"
     },
     {
       "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\robots.txt",
@@ -323,12 +340,12 @@
       "OriginalItemSpec": "wwwroot\\service-worker.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.dfe1958d.chunk.css",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/css/2.dfe1958d.chunk.css",
+      "RelativePath": "static/css/2.c0a58fe2.chunk.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,15 +354,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\2.dfe1958d.chunk.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\2.c0a58fe2.chunk.css"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.dfe1958d.chunk.css.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/css/2.dfe1958d.chunk.css.map",
+      "RelativePath": "static/css/2.c0a58fe2.chunk.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -354,15 +371,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\2.dfe1958d.chunk.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\2.c0a58fe2.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.b0ea683f.chunk.css",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/css/main.b0ea683f.chunk.css",
+      "RelativePath": "static/css/main.75ac9991.chunk.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.b0ea683f.chunk.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.75ac9991.chunk.css"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.b0ea683f.chunk.css.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/css/main.b0ea683f.chunk.css.map",
+      "RelativePath": "static/css/main.75ac9991.chunk.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.b0ea683f.chunk.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.75ac9991.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\1.eee8b818.chunk.js",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/1.eee8b818.chunk.js",
+      "RelativePath": "static/js/2.c8431c27.chunk.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +422,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\1.eee8b818.chunk.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\2.c8431c27.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\1.eee8b818.chunk.js.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/1.eee8b818.chunk.js.map",
+      "RelativePath": "static/js/2.c8431c27.chunk.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,15 +439,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\1.eee8b818.chunk.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\2.c8431c27.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.d0fe39e6.chunk.js",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/2.d0fe39e6.chunk.js",
+      "RelativePath": "static/js/3.01dad211.chunk.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,15 +456,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\2.d0fe39e6.chunk.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\3.01dad211.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.d0fe39e6.chunk.js.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/2.d0fe39e6.chunk.js.map",
+      "RelativePath": "static/js/3.01dad211.chunk.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -456,15 +473,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\2.d0fe39e6.chunk.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\3.01dad211.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.c1883dde.chunk.js",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/main.c1883dde.chunk.js",
+      "RelativePath": "static/js/main.95bca5be.chunk.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -473,15 +490,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.c1883dde.chunk.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.95bca5be.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.c1883dde.chunk.js.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/main.c1883dde.chunk.js.map",
+      "RelativePath": "static/js/main.95bca5be.chunk.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -490,15 +507,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.c1883dde.chunk.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.95bca5be.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.cc696fea.js",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/runtime~main.cc696fea.js",
+      "RelativePath": "static/js/runtime~main.37a72dc8.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -507,15 +524,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.cc696fea.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.37a72dc8.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.cc696fea.js.map",
+      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
-      "RelativePath": "static/js/runtime~main.cc696fea.js.map",
+      "RelativePath": "static/js/runtime~main.37a72dc8.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -524,7 +541,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.cc696fea.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.37a72dc8.js.map"
     },
     {
       "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.13db00b7.eot",
