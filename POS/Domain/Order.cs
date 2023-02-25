@@ -14,6 +14,6 @@ namespace Domain
         public string Comments { get; set; }
 	public Guid? CustomerId { get; set; }
  	public virtual Customer? Customer { get; set; }
-        public virtual ICollection<OrderDetail> ProductsDetails { get; set; }
+        public ICollection<OrderDetail> ProductsDetails { get; set; }=new List<OrderDetail>();
     }
 }

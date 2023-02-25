@@ -3,10 +3,11 @@ using System.Collections.Generic;
 
 namespace Persistence.newModel
 {
-    public partial class InvoiceTable
+    public class InvoiceTable
     {
-        public int? Id { get; set; }
-        public DateTime? DateOfSale { get; set; }
-        public int? CustomerId { get; set; }
+        public int Id { get; set; }
+        public DateTime DateOfSale { get; set; }
+        public int CustomerId { get; set; }
+        public ICollection<InvoiceDetails> InvoiceDetails { get; set; }=new List<InvoiceDetails>();              
     }
 }
