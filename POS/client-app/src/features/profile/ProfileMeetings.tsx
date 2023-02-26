@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Image, Card, Grid, Header, Tab, TabProps } from "semantic-ui-react";
 import { UserMeeting } from "../../app/models/profile";
 import { useStore } from "../../app/stores/store";
-import MeetingCard from "./MeetingCard";
+
 const panes = [
   { menuItem: "future meetings", pane: { key: "future" } },
   { menuItem: "past meetings", pane: { key: "past" } },

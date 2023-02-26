@@ -1256,19 +1256,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Umar\\.nuget\\packages\\": {}
+    "C:\\Users\\iumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Application\\obj\\",
+      "projectPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\iumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\iumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1282,11 +1282,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
+            "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj": {
-              "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj"
+            "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj"
             }
           }
         }

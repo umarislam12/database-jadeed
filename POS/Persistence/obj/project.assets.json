@@ -906,19 +906,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Umar\\.nuget\\packages\\": {}
+    "C:\\Users\\iumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
-      "packagesPath": "C:\\Users\\Umar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Persistence\\obj\\",
+      "projectPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Persistence\\Persistence.csproj",
+      "packagesPath": "C:\\Users\\iumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Umar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\iumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -932,8 +932,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
+            "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\Domain\\Domain.csproj"
             }
           }
         }

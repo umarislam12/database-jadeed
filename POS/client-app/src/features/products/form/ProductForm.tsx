@@ -19,7 +19,6 @@ export default observer(function ProductForm() {
   const {
     createProduct,
     updateProduct,
-    loading,
     loadProduct,
     loadingInitial,
   } = productStore;
@@ -41,6 +40,7 @@ export default observer(function ProductForm() {
     retailPrice: Yup.number().required('required'),
     packed: Yup.boolean().required('required'),
   
+    created: Yup.string().required('required'),
     modified: Yup.string().required('required'),
   });
   useEffect(() => {
@@ -128,6 +128,13 @@ export default observer(function ProductForm() {
             <MyDateInput
               placeholderText="modified"
               name="modified"
+              showTimeSelect
+              timeCaption="time"
+              dateFormat="MMMM d, yyyy h:mm aa"
+            />
+             <MyDateInput
+              placeholderText="created"
+              name="created"
               showTimeSelect
               timeCaption="time"
               dateFormat="MMMM d, yyyy h:mm aa"

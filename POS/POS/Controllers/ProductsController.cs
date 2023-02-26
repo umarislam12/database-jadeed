@@ -23,6 +23,7 @@ namespace POS.Controllers
 
             return ResultHandler(await Mediator.Send(new Details.Query { Id = id }));
         }
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> CreateProduct(Product product) 
         { 

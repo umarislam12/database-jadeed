@@ -1,19 +1,15 @@
 import { observer } from "mobx-react-lite";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import { Button, FormField, Header, Label, Segment } from "semantic-ui-react";
+import { Button, Header, Segment } from "semantic-ui-react";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
-import { Product } from "../../../app/models/product";
 import { useStore } from "../../../app/stores/store";
 import { v4 as uuid } from "uuid";
-import { Formik , Form, Field, ErrorMessage} from "formik";
+import { Formik , Form} from "formik";
 import * as Yup from 'yup';
 import MyTextInput from "../../../app/common/form/MyTextInput";
-import MyTextArea from "../../../app/common/form/MyTextArea";
-import MySelectInput from "../../../app/common/form/MySelectInput";
-import { categoryOptions } from "../../../app/common/form/options/categoryOptions";
 import MyDateInput from "../../../app/common/form/MyDateInput";
-import { Meeting, MeetingFormValues } from "../../../app/models/meeting";
+import { MeetingFormValues } from "../../../app/models/meeting";
 export default observer(function MeetingForm() {
   const history = useHistory();
   const { meetingStore } = useStore();

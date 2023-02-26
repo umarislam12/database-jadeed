@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r8PsnKr7FbIJZ3HZb8V13Ifp+J911JikOEB7ACQfVTc=",
+  "Hash": "exynYu9kng/4mNqjku724wJ3K8nTi3Se9h92QL2eFfQ=",
   "Source": "POS",
   "BasePath": "_content/POS",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "POS\\wwwroot",
       "Source": "POS",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\asset-manifest.json",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\asset-manifest.json",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "asset-manifest.json",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\abc.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\abc.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/abc.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\abc.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\culture.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\culture.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/culture.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\culture.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\drinks.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\drinks.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/drinks.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\drinks.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\film.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\film.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/film.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\film.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\food.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\food.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/food.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\food.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\music.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\music.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/music.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\music.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\travel.jpg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\categoryImages\\travel.jpg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/categoryImages/travel.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\travel.jpg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\logo.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\logo.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/logo.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\placeholder.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\placeholder.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/placeholder.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\placeholder.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\user.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\assets\\user.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "assets/user.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\user.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\favicon.ico",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\index.html",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\logo192.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\logo192.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "logo192.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\logo192.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\logo512.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\logo512.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "logo512.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\logo512.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\manifest.json",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\manifest.json",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "manifest.json",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\precache-manifest.1094d6395186fe8568ad43fb279412d7.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\precache-manifest.1094d6395186fe8568ad43fb279412d7.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "precache-manifest.1094d6395186fe8568ad43fb279412d7.js",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\precache-manifest.1094d6395186fe8568ad43fb279412d7.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\robots.txt",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\robots.txt",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "robots.txt",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\service-worker.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\service-worker.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "service-worker.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\service-worker.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/css/2.c0a58fe2.chunk.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\2.c0a58fe2.chunk.css"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\2.c0a58fe2.chunk.css.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/css/2.c0a58fe2.chunk.css.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\2.c0a58fe2.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/css/main.75ac9991.chunk.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.75ac9991.chunk.css"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\css\\main.75ac9991.chunk.css.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/css/main.75ac9991.chunk.css.map",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.75ac9991.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/2.c8431c27.chunk.js",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\2.c8431c27.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\2.c8431c27.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/2.c8431c27.chunk.js.map",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\2.c8431c27.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/3.01dad211.chunk.js",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\3.01dad211.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\3.01dad211.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/3.01dad211.chunk.js.map",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\3.01dad211.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/main.95bca5be.chunk.js",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.95bca5be.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\main.95bca5be.chunk.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/main.95bca5be.chunk.js.map",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.95bca5be.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/runtime~main.37a72dc8.js",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.37a72dc8.js"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js.map",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\js\\runtime~main.37a72dc8.js.map",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/js/runtime~main.37a72dc8.js.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\runtime~main.37a72dc8.js.map"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.13db00b7.eot",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.13db00b7.eot",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/brand-icons.13db00b7.eot",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\brand-icons.13db00b7.eot"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.a046592b.woff",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.a046592b.woff",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/brand-icons.a046592b.woff",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\brand-icons.a046592b.woff"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.a1a749e8.svg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.a1a749e8.svg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/brand-icons.a1a749e8.svg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\brand-icons.a1a749e8.svg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.c5ebe0b3.ttf",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.c5ebe0b3.ttf",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/brand-icons.c5ebe0b3.ttf",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\brand-icons.c5ebe0b3.ttf"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.e8c322de.woff2",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\brand-icons.e8c322de.woff2",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/brand-icons.e8c322de.woff2",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\brand-icons.e8c322de.woff2"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\flags.9c74e172.png",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\flags.9c74e172.png",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/flags.9c74e172.png",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\flags.9c74e172.png"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.0ab54153.woff2",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.0ab54153.woff2",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/icons.0ab54153.woff2",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\icons.0ab54153.woff2"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.8e3c7f55.eot",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.8e3c7f55.eot",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/icons.8e3c7f55.eot",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\icons.8e3c7f55.eot"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.962a1bf3.svg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.962a1bf3.svg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/icons.962a1bf3.svg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\icons.962a1bf3.svg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.b87b9ba5.ttf",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.b87b9ba5.ttf",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/icons.b87b9ba5.ttf",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\icons.b87b9ba5.ttf"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.faff9214.woff",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\icons.faff9214.woff",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/icons.faff9214.woff",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\icons.faff9214.woff"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.701ae6ab.eot",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.701ae6ab.eot",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/outline-icons.701ae6ab.eot",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\outline-icons.701ae6ab.eot"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.82f60bd0.svg",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.82f60bd0.svg",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/outline-icons.82f60bd0.svg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\outline-icons.82f60bd0.svg"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.ad97afd3.ttf",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.ad97afd3.ttf",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/outline-icons.ad97afd3.ttf",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\outline-icons.ad97afd3.ttf"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.cd6c777f.woff2",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.cd6c777f.woff2",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/outline-icons.cd6c777f.woff2",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\outline-icons.cd6c777f.woff2"
     },
     {
-      "Identity": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.ef60a4f6.woff",
+      "Identity": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\static\\media\\outline-icons.ef60a4f6.woff",
       "SourceId": "POS",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Umar\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\iumar\\OneDrive\\Desktop\\database-jadeed\\POS\\POS\\wwwroot\\",
       "BasePath": "_content/POS",
       "RelativePath": "static/media/outline-icons.ef60a4f6.woff",
       "AssetKind": "All",

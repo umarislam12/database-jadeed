@@ -1,3 +1,4 @@
+
 import { format } from 'date-fns';
 import React, { SyntheticEvent, useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { useStore } from '../../../app/stores/store';
 interface Props {
     product: Product
 }
-export default function productListItem({ product }: Props) {
+export default function ProductListItem({ product }: Props) {
     const { productStore } = useStore();
     const { deleteProduct, loading } = productStore;
     const [target, setTarget] = useState('');
