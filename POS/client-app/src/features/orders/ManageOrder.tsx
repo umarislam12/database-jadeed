@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridColumn } from 'semantic-ui-react'
+import { Button, Grid, GridColumn } from 'semantic-ui-react'
 import SearchBar from './SearchBar'
 
 const ManageOrder = () => {
@@ -10,7 +10,9 @@ const ManageOrder = () => {
                 <Grid.Row>
                     <Grid.Column floated='left' width={8}>
                         <SearchBar />
+                        
                     </Grid.Column>
+                    <Button  floated='left'>+</Button>
                 </Grid.Row>
                 <Grid.Column floated='right' width={8}>
                     <Grid >
