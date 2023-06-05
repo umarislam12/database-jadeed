@@ -2,7 +2,7 @@
 import { format } from 'date-fns';
 import React, { SyntheticEvent, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Button, Icon, Item, Label, Segment } from 'semantic-ui-react'
+import { Button, Icon, Item, Label, Segment, Table } from 'semantic-ui-react'
 import { Product } from '../../../app/models/product';
 import { useStore } from '../../../app/stores/store';
 interface Props {
@@ -17,6 +17,8 @@ export default function ProductListItem({ product }: Props) {
         deleteProduct(id);
     }
     return (
+        <>
+       
         <Segment.Group>
             <Segment>
                 <Item.Group>
@@ -28,7 +30,7 @@ export default function ProductListItem({ product }: Props) {
 
                                 </Item.Header>
                                 <Item.Description>
-                                    {product.description}
+                                    {/* {product.description} */}
                                 </Item.Description>
                             </Item.Content>
                         </Item.Image>
@@ -37,12 +39,7 @@ export default function ProductListItem({ product }: Props) {
 
 
             </Segment>
-            <Segment>
-                <span>
-                    <Icon name='clock' />
-                    {format(product.modified!, 'dd MMM yyyy h:mm')}
-                </span>
-            </Segment>
+            
             <Segment secondary>{product.cost}</Segment>
             <Segment>
                 <span>{product.productNumber}</span>
@@ -52,5 +49,6 @@ export default function ProductListItem({ product }: Props) {
                 <Button as={Link} to={`/products/${product.id}`} color='teal' floated='right' content='view' />
             </Segment>
         </Segment.Group>
+        </>
     )
 }

@@ -5,9 +5,11 @@ import { Grid, List } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 
 import { useStore } from '../../../app/stores/store';
-import ProductFilter from './ProductFilter';
+//import ProductFilter from './ProductFilter';
 
 import ProductList from './ProductList';
+
+
 
 export default observer(function ProductDashboard() {
   const{productStore}=useStore();
@@ -25,13 +27,13 @@ export default observer(function ProductDashboard() {
   if(productStore.loadingInitial) return <LoadingComponent content='loading products'/>
   return (
     <Grid>
-      <Grid.Column width='10'>
+      <Grid.Column width='16'>
         <ProductList  
        
         />
       </Grid.Column>
-      <Grid.Column width='6'>
-        <ProductFilter/>
+      <Grid.Column width='4'>
+        {/* <ProductFilter/> */}
         {/* {selectedProduct && !editMode &&
         <ProductDetails
      

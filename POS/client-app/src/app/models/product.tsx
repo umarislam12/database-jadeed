@@ -35,8 +35,8 @@ export class ProductFormValues {
   wholesalePrice: number = 0;
   retailPrice: number = 0;
   packed: boolean = false;
-  created: Date | null = null;
-  modified: Date | null  = null;
+  created: Date | null | {} = null;
+  modified: Date | null | {}  = null;
   constructor(product?: ProductFormValues) {
     if (product) {
       this.id = product.id;

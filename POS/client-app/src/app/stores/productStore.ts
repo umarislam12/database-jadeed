@@ -17,6 +17,9 @@ export default class ProductStore {
         return Array.from(this.productRegistry.values()).sort((a, b) =>
            a.modified!.getTime() - b.modified!.getTime())
     }
+    // get ungroupedProducts(){
+
+    // }
     get groupedProducts() {
         return Object.entries(
             this.ProductsByDate.reduce((products, product) => {
@@ -110,6 +113,7 @@ export default class ProductStore {
     updateProduct = async (product: ProductFormValues) => {
         //this.loading = true;
         try {
+            console.log(product)
             await agent.products.update(product);
 
             runInAction(() => {
@@ -123,7 +127,7 @@ export default class ProductStore {
                 // this.selectedProduct = product;
                 // this.editMode = false;
                 // this.loading = false;
-
+                        console.log(this.selectedProduct)
             })
 
         } catch (error) {

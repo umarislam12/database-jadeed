@@ -50,7 +50,7 @@ export default observer(function MeetingDetailedChat({ meetingId }: Props) {
                     <textarea placeholder="Enter your comment(enter to submit, shift+enter for new line)"
                     rows={2}
                     {...props.field}
-                    onKeyPress={e=>{
+                    onKeyDown={e=>{
                       if(e.key==='Enter' && e.shiftKey){
                         return;
 
