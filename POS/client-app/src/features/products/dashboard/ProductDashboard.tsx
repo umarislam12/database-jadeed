@@ -5,7 +5,7 @@ import { Grid, List } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 
 import { useStore } from '../../../app/stores/store';
-//import ProductFilter from './ProductFilter';
+
 
 import ProductList from './ProductList';
 

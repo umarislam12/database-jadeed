@@ -48,7 +48,7 @@ export default observer(function ProductList() {
                 <Table.Body>
                     {ProductsByDate.map((product) =>
                     (
-                        <Table.Row>
+                        <Table.Row key={product.id}>
                             <Table.Cell>{product.productName}</Table.Cell>
                             <Table.Cell>{product.productNumber}</Table.Cell>
                             <Table.Cell textAlign='right'>{product.description}</Table.Cell>
